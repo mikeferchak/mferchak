@@ -1,59 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-<title>mferchak.com | The place for all things Mike Ferchak-y</title>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22180791']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<link rel="stylesheet" type="text/css" href="elements/css/style.css"/>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<title>mferchak.com | The place for all things Mike Ferchak-y</title>
+	<script type='text/javascript' src='script/jquery.js'></script>
+	<script type='text/javascript' src='script/last.fm.records.js'></script>
+	<script type="text/javascript" src="script/jquery.twitter-friends-1.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 
 <body>
 
 <div id="stuff">
 	<header>
-		<h1>Hello, world.</h1>
+		<div id="header">
+			<h1>Hello!</h1>
+		</div>
 	</header>
 	<section>
-		<h2>Contact:</h2>
-		<ul>
-			<li>mikeferchak@gmail.com</li>
-		</ul>
-		<h2>Game:</h2>
-		<ul>
-			<li>xbox live: thediabeetus</li>
-		</ul>
-		<h2>Creep:</h2>
-		<ul>
-			<li><a href="http://ferchakhax.tumblr.com">ferchakhax.tumblr.com</a> - NEW! </li>
-			<li><a href="http://digg.com/damnthatsfunky">digg.com/damnthatsfunky</a></li>
-			<li><a href="http://twitter.com/admiralpancakes">twitter.com/admiralpancakes</a></li>
-			<li><a href="http://last.fm/user/thediabeetus">last.fm/user/thediabeetus</a></li>
-			<li><a href="http://facebook.com/mikeferchak">facebook.com/mikeferchak</a></li>
-			<li><a href="http://cafepress.com/sk/captainpancakes">cafepress.com/sk/captainpancakes</a></li>
-			<li><a href="http://vimeo.com/user609468">vimeo.com/user609468</a></li>
-			<li><a href="http://levlr.com/mike">levlr.com/mike</a></li>
-		</ul>
+		<div id="about">
+			<p>This is the personal Internet repository of all information belonging to the individual named “<a href="http://mferchak.com">Michael Ferchak</a>”. This is it. All of it. All other Michael Ferchak's or information pertaining to another person of that name should be consumed, enjoyed, and then forgotten about immediately.</p>
+			<p>The owner and maintainer of this hypertext document prides himself in the making of sexxxy websites that comply with only the strictest and bestest <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fmferchak.com&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0" title="OHHH YEAH">web standards</a>. Please send all <a href="http://www.spam.com/">Spam®</a> emails to <a href="mailto:mikeferchak@gmail.com">mikeferchak at google mail dot com</a>. Don’t call me, I have an iPhone. </p>
+		</div>
 	</section>
-	<section>
-			<!-- This is the part where I add a stupid feed of every idiotic thing I post on the internets
-			
-			
-			-->
-	</section>
+	
+	<!--section>
+		<div id="othercrap">
+			<div id="socialmedialoool">
+				<h2>Social Media, <span class="loool">LOL!</span></h2>
+			</div>
+			<div id="tunes">
+				<h2>Tünes!</h2>
+				<div id="lastfmrecords"></div>
+				<script type="text/javascript">
+				  jQuery(document).ready( function() {
+				    var _config = {
+				      // last.fm username
+				      username: 'thediabeetus',
+				      // number of images to show
+				      count: 9,
+				      // period to get last.fm data from
+				      period: '3month',
+				      // when to get new data from last.fm (in minutes)
+				      refresh: 1,
+				      // difference between your timezone and GMT.
+				      offset: 1
+				  };
+				 lastFmRecords.init(_config);
+				 });
+				</script>
+			</div>
+			<div id="friendsies">
+				<h2>Friendsies</h2>
+				<div class="twitter-friends" options="{
+				   users:40,
+					friends:1,
+					username:'mikeferchak', 
+					user_change:2
+				}"></div>
+			</div>
+			<div id="neato_stuff">
+				<h2>Neato stuff!</h2>
+			</div>
+		</div>
+	</section-->
+	
+	<footer>
+		<div id="footer">
+			<div>
+				<h2>Contact:</h2>
+				<ul>
+					<li><a href="mailto:mikeferchak@gmail.com">mikeferchak@gmail.com</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>Game:</h2>
+				<ul>
+					<li>xbox live: thediabeetus</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Creep:</h2>
+				<ul>
+					<li><a href="http://ferchakhax.tumblr.com">ferchakhax.tumblr.com</a></li>
+					<li><a href="http://digg.com/damnthatsfunky">digg.com/damnthatsfunky</a></li>
+					<li><a href="http://twitter.com/admiralpancakes">twitter.com/admiralpancakes</a></li>
+					<li><a href="http://last.fm/user/thediabeetus">last.fm/user/thediabeetus</a></li>
+					<li><a href="http://facebook.com/mikeferchak">facebook.com/mikeferchak</a></li>
+					<li><a href="http://cafepress.com/sk/captainpancakes">cafepress.com/sk/captainpancakes</a></li>
+					<li><a href="http://vimeo.com/user609468">vimeo.com/user609468</a></li>
+					<li><a href="http://levlr.com/mike">levlr.com/mike</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</footer>
 </div>
 </body>
 </html>

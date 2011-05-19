@@ -1,0 +1,134 @@
+/* This is the best CSS
+
+Color index:
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #d30102
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+
+all margins and spaces and crap are multiples of 4px
+
+*/
+
+/* reset styles - Graciously provided by Dan Cederholm - http://simplebits.com/
+--------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    }
+ol, ul {
+    list-style: none;
+    }
+blockquote, q {
+    quotes: none;
+    }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+
+
+/* Laying down the basic crap */
+body, h1, h2, ul, li, div, a, p {
+	color:#fdf6e3; 
+	font-family: 'Goudy Bookletter 1911', arial, serif;
+	font-weight: 100;
+	} 
+
+p {
+	font-size: 14pt;
+}
+
+h1	{
+	font-size:38pt;
+	margin: 20px 0 -8px 0;
+}
+
+h2	{
+	font-size:24pt;
+	margin: 20px 0 -8px 0;
+}
+
+body {
+	background-image:url(../images/background.jpg);
+	background-color:#657b83;
+	background-size: 100%;
+	background-position:top middle;
+	}
+
+a:hover, a:link, a:visited, a {
+	background-color:rgba(181, 137, 0, .24);
+	text-decoration:none;
+}
+
+
+
+#stuff {
+		width:800px;
+		margin:0px auto;
+}
+
+#header {
+	border-bottom:1px solid #fdf6e3;
+}
+
+#about {
+	margin: 16px 0;
+}
+
+div#about {
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+	column-count: 2;
+	column-gap: 20px;
+}
+
+#about p {
+font-size:18pt;
+}
+
+.loool {
+	display:inline-block;
+}
+
+.loool:hover {
+	background-image:url(../images/looool2.png);
+	background-repeat:no-repeat;
+	background-position:0px 5px;
+	display:inline-block;
+	padding:0 0 0 30px;
+	-webkit-transition:.2s ease-in;
+}
+
+#lastfmrecords img {
+	width: 48px;
+}
+
+#footer div {
+		display:inline-block;
+		width:248px;
+		height:auto;
+		vertical-align:top;
+		margin:0 16px 8px 0;
+}
+

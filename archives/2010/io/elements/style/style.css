@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+h1 {margin:0px; color:#333; font-size:30px;}
+h3 {font-size:20px; margin:0px 0px 20px 7px;}
+h4 {color:#999; margin:0px; }
+
+.wrap {width:800px; margin:0px auto;}
+
+#header {padding: 0px;height: 106px;width: auto;background-color: #FFF; background-image:url(../img/home-bg.jpg); background-repeat:repeat-x;}
+
+#vivlogo {position:relative;top:29px;left:-20px;}
+#iologo {float:right; height:40px; width:218px; background-image:url(../img/iologo.png); background-repeat:no-repeat;}
+
+#content {}
+#sidebar { width: 180px; float: left; min-height: 500px; }
+#sidebar-nav-items {font-size:18px; margin:0px; padding:0px; list-style:none; li}
+.sidebar-nav-item a { margin:2px 0px 2px 0px; padding:0px; display:block; height:25px; list-style:none; width:150px; padding:0px 0px 0px 30px; }
+li.sidebar-nav-item ul {margin:0px 0px 10px 30px; padding:0px;}
+li.sidebar-nav-item ul li {font-size:12px; list-style:inside;}
+li.sidebar-nav-item ul li:hover {font-weight:bold;}
+#graph { margin:0px auto; padding:10px; border:#000 1px solid;}
+#graphinfo { width:200px; float:right;}
+
+.infosection {margin: 10px; padding:10px;}
+
+#explore { background-image:url(../img/ioicons.png); background-repeat:no-repeat; background-position: -180px -9px; }
+	#explore:hover { background-image:url(../img/ioicons.png); background-repeat:no-repeat; background-position: 0px -9px; }
+#analyze {background-image:url(../img/ioicons.png); background-repeat:no-repeat; background-position: -180px -39px;}
+	#analyze:hover {background-image:url(../img/ioicons.png); background-repeat:no-repeat; background-position: 0px -39px;}
+#recommend {background-image:url(../img/ioicons.png); background-repeat:no-repeat; background-position: -180px -69px;}
+	#recommend:hover {background-image:url(../img/ioicons.png); background-repeat:no-repeat; background-position: 0px -69px;}
+
+
+.graph {background-image:url(../img/shadow.png); background-repeat:repeat-x; background-position:bottom;border:#000 1px solid;}
+.comments {min-height:100px;padding: 10px; color:#333;}
+.comments p {margin:0px;}
+.alerts { min-height:100px;}
+.recommendations { min-height:100px; }
+#footer {clear:both;color:#555555;font-size:11px;height:50px;padding:50px 0 0;text-align:center;}
+
+#info { margin:10px auto; -moz-border-radius: 5px; border: #c08a35 5px solid; background-repeat:repeat-x; background-color:#FFF; }

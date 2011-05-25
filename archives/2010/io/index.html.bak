@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>spash page</title>
+<link href="elements/style/style.css" rel="stylesheet" type="text/css" />
+<script src="elements/js/mochi/MochiKit.js" type="text/javascript"></script>
+<script src="elements/js/plotkit/excanvas.js" type="text/javascript"></script>
+<script src="elements/js/plotkit/PlotKit_Packed.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header">
+	<div class="wrap">
+	<div id="vivlogo">
+	<img src="elements/img/vivlogo.gif" />
+	</div>
+	</div>
+</div>
+
+<div id="content" class="wrap">
+	<div id="sidebar">
+		<ul id="sidebar-nav-items">
+			<li class="sidebar-nav-item"><a id="explore" href="./1"></a>
+				<ul>
+					<li></li>
+				</ul>
+			</li
+			<li class="sidebar-nav-item" ><a id="analyze" href="./2"></a>
+				<ul>
+					<li>Seed analysis</li>
+					<li>Filetype distribution</li>
+					<li>Duplicate data</li>
+				</ul>
+			</li>
+			<li class="sidebar-nav-item"><a id="recommend" href="./2"></a></li>
+		</ul>
+	</div>
+	<div id="info">
+		<div class="info-title"></div>
+		<div class="graph infosection">
+		<h4>Graph</h4>
+		<div id="graph" width="350" height="350"></div>
+			 <script type="text/javascript">
+				var data = [[0,0], [1,2], [2,3], [3, 7], [4, 8], [5, 6]];
+				var plotter = EasyPlot("pie", {}, $("graph"), [data]);
+			</script>
+		</div>
+		<div class="comments infosection">
+			<h4>Comments</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis, lacus ac fermentum rutrum, justo urna tincidunt augue, sed dignissim ligula lectus sit amet lectus. In hac habitasse platea dictumst.</p>
+		</div>
+		<div class="alerts infosection">
+			<h4>Alerts</h4>
+			<div class="alert"><p></p></div>
+		</div>
+		<div class="recommendations infosection">
+			<h4>Recommendations</h4>
+			<p>recommendations</p>
+		</div>
+	</div>
+</div>
+
+<!--div id="footer">
+footer
+</div-->
+
+</body>
+</html>

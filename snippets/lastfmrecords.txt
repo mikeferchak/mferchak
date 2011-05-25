@@ -1,0 +1,22 @@
+<div id="lastfmrecords"></div>
+
+<script type='text/javascript' src='/PATH/TO/jquery.js'></script>
+<script type='text/javascript' src='/PATH/TO/last.fm.records.js'></script>
+<script type="text/javascript">
+//  By Jeroen Smeets -- http://jeroensmeets.net/wordpress/lastfmrecords/
+  jQuery(document).ready( function() {
+    var _config = {
+      // last.fm username
+      username: 'thediabeetus',
+      // number of images to show
+      count: 9,
+      // period to get last.fm data from
+      period: '3month',
+      // when to get new data from last.fm (in minutes)
+      refresh: 1,
+      // difference between your timezone and GMT.
+      offset: 1
+  };
+ lastFmRecords.init(_config);
+ });
+</script>

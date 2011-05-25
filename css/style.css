@@ -1,4 +1,4 @@
-/* This is the best CSS
+/* This fancy-pants cascading stylesheet was mostly created by Mike '900px of cold hard steel' Ferchak
 
 Color index:
 base03    #002b36
@@ -48,7 +48,7 @@ table {
 
 /* Laying down the basic crap */
 body, h1, h2, ul, li, div, a, p {
-	color:#fdf6e3; 
+	color:#002b36; 
 	font-family: 'Goudy Bookletter 1911', arial, serif;
 	font-weight: 100;
 	} 
@@ -68,8 +68,7 @@ h2	{
 }
 
 body {
-	background-image:url(../images/background.jpg);
-	background-color:#657b83;
+	background-color:#eee8d5;
 	background-size: 100%;
 	background-position:top middle;
 	}
@@ -130,5 +129,6 @@ font-size:18pt;
 		height:auto;
 		vertical-align:top;
 		margin:0 16px 8px 0;
+		text-align:center;
 }
 

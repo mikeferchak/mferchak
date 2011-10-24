@@ -48,10 +48,10 @@ table {
 
 /* Laying down the basic crap */
 body, h1, h2, ul, li, div, a, p {
-	color:#002b36; 
+	color:#002b36;
 	font-family: 'Goudy Bookletter 1911', arial, serif;
 	font-weight: 100;
-	} 
+	}
 
 p {
 	font-size: 14pt;
@@ -69,15 +69,28 @@ h2	{
 
 body {
 	background-color:#eee8d5;
-	background-size: 100%;
+    background-image:url(../images/background.png);
 	background-position:top middle;
 	}
 
-a:hover, a:link, a:visited, a {
-	background-color:rgba(181, 137, 0, .24);
+a:link, a:visited, a {
+    background-color:rgba(181, 137, 0, .1);
 	text-decoration:none;
+    -webkit-transition:background .3s;
+       -moz-transition:background .3s;
+         -o-transition:background .3s;
+         -k-transition:background .3s;
 }
 
+a:hover {
+    background-color:rgba(181, 137, 0, .24);
+    text-decoration:none;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 1px 1px 6px rgba(0,0,0,0.2);
+}
 
 
 #stuff {
@@ -86,11 +99,12 @@ a:hover, a:link, a:visited, a {
 }
 
 #header {
-	border-bottom:1px solid #fdf6e3;
+    padding:0 1em;
 }
 
 #about {
-	margin: 16px 0;
+	margin: 1em;
+    padding: 1em 0;
 }
 
 div#about {

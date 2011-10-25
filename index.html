@@ -15,21 +15,6 @@
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
 <!--script type='text/javascript' src='script/last.fm.records.js'></script>
 <script type="text/javascript" src="script/jquery.twitter-friends-1.0.min.js"></script-->
-	<script>
-		$(document).ready(function() {
-      		var bodyWidth = $("header").width() - 20;
-			var originalHeaderWidth = $("header h1").outerWidth();
-			var originalHeaderHeight = parseInt($("header h1").css("font-size"));
-			var headerAspect = originalHeaderHeight / originalHeaderWidth;
-			var newHeaderHeight = headerAspect * bodyWidth ;
-			$("header h1").css("font-size", newHeaderHeight);
-			$(window).resize(function() {
-	      		var bodyWidth = $("header").width() - 20;
-				var newHeaderHeight = headerAspect * bodyWidth;
-				$("header h1").css("font-size", newHeaderHeight);
-			});
-		});
-	</script>
 </head>
 
 <body>
@@ -115,5 +100,20 @@
 	</footer>
 
 </div>
+<script>
+	$(document).ready(function() {
+  		var bodyWidth = $("header").width();
+		var originalHeaderWidth = $("header h1").outerWidth();
+		var originalHeaderHeight = parseInt($("header h1").css("font-size"));
+		var headerAspect = originalHeaderHeight / originalHeaderWidth;
+		var newHeaderHeight = headerAspect * bodyWidth ;
+		$("header h1").css("font-size", newHeaderHeight);
+		$(window).resize(function() {
+      		var bodyWidth = $("header").width();
+			var newHeaderHeight = headerAspect * bodyWidth;
+			$("header h1").css("font-size", newHeaderHeight);
+		});
+	});
+</script>
 </body>
 </html>

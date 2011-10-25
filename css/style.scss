@@ -56,7 +56,13 @@ p {
 
 h1	{
 	font-size:38pt;
+    display:inline;
 	margin: 20px 0 -8px 0;
+    @include transition(font-size 0.1s);
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 h2	{
@@ -100,6 +106,7 @@ section {
 header {
     padding: 12pt 12pt 0 12pt;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    text-align:center;
 }
 
 #about {

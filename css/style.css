@@ -13,7 +13,7 @@ body, h1, h2, ul, li, div, a, p { color: #2c3335; font-family: 'Goudy Bookletter
 
 p { font-size: 14pt; }
 
-h1 { font-size: 38pt; margin: 20px 0 -8px 0; }
+h1 { font-size: 38pt; display: inline; margin: 20px 0 -8px 0; -webkit-transition: font-size 0.1s; -moz-transition: font-size 0.1s; -o-transition: font-size 0.1s; -k-transition: font-size 0.1s; transition: font-size 0.1s; text-align: center; overflow-x: hidden; overflow-y: hidden; white-space: nowrap; }
 
 h2 { font-size: 24pt; margin: 20px 0 -8px 0; }
 
@@ -27,7 +27,7 @@ section { background-color: rgba(255, 255, 255, 0.5); -webkit-box-shadow: inset 
 
 #stuff { _width: 800px; #width: 800px; max-width: 800px; margin: 0 auto; }
 
-header { padding: 12pt 12pt 0 12pt; text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); }
+header { padding: 12pt 12pt 0 12pt; text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); text-align: center; }
 
 #about { margin: 1em 0; padding: 1em; }
 #about div { -moz-column-count: 2; -moz-column-gap: 20px; -webkit-column-count: 2; -webkit-column-gap: 20px; column-count: 2; column-gap: 20px; }

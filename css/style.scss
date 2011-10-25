@@ -1,6 +1,6 @@
 /* This fancy-pants cascading stylesheet was mostly created by Mike '900px of cold hard steel' Ferchak */
 
-$main-text: #2C3335;
+$main-text: #214445;
 $page-width: 800px;
 
 @mixin shadow {
@@ -63,6 +63,7 @@ h1	{
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
+    line-height:200%
 }
 
 h2	{
@@ -100,13 +101,14 @@ section {
     _width: $page-width;
     #width: $page-width;
 	max-width: $page-width;
-	margin:0 auto;
+	margin:0 auto 3em;
 }
 
 header {
     padding: 12pt 12pt 0 12pt;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-align:center;
+    line-height:200%;
 }
 
 #about {

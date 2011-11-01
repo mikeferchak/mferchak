@@ -19,6 +19,10 @@ $page-width: 800px;
             transition:$options;
 }
 
+.collapsed{
+    height:20px;
+    overflow:hidden;
+}
 
 /* reset styles - Graciously provided by Dan Cederholm - http://simplebits.com/--------------------------------------------- */
 

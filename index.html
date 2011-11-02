@@ -42,47 +42,6 @@
       </div>
    </section>
 
-   <!--section>
-      <div id="othercrap">
-         <div id="socialmedialoool">
-            <h2>Social Media, <span class="loool">LOL!</span></h2>
-         </div>
-         <div id="tunes">
-            <h2>Tünes!</h2>
-            <div id="lastfmrecords"></div>
-            <script type="text/javascript">
-              jQuery(document).ready( function() {
-                var _config = {
-                  // last.fm username
-                  username: 'thediabeetus',
-                  // number of images to show
-                  count: 9,
-                  // period to get last.fm data from
-                  period: '3month',
-                  // when to get new data from last.fm (in minutes)
-                  refresh: 1,
-                  // difference between your timezone and GMT.
-                  offset: 1
-              };
-             lastFmRecords.init(_config);
-             });
-            </script>
-         </div>
-         <div id="friendsies">
-            <h2>Friendsies</h2>
-            <div class="twitter-friends" options="{
-               users:40,
-               friends:1,
-               username:'mikeferchak',
-               user_change:2
-            }"></div>
-         </div>
-         <div id="neato_stuff">
-            <h2>Neato stuff!</h2>
-         </div>
-      </div>
-   </section-->
-
    <footer>
       <div>
          <h2>Contact:</h2>
@@ -113,11 +72,7 @@
 </div>
 <script>
    $(document).ready(function() {
-      $("#about").click(function(){
-         $(this).toggleClass("collapsed");
-      });
-
-        var bodyWidth = $("header").width();
+      var bodyWidth = $("header").width();
       var originalHeaderWidth = $("header h1").outerWidth();
       var originalHeaderHeight = parseInt($("header h1").css("font-size"));
       var headerAspect = originalHeaderHeight / originalHeaderWidth;

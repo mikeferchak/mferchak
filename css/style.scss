@@ -55,12 +55,12 @@ table {
   font-family: 'Goudy Bookletter 1911';
   font-style: normal;
   font-weight: normal;
-  src: local('Goudy Bookletter 1911'), local('GoudyBookletter1911'), url('http://themes.googleusercontent.com/static/fonts/goudybookletter1911/v2/l5lwlGTN3pEY5Bf-rQEuIM1yrN2lJveIMQB3sFVC2WOglnMp3_3A8V8Ai8YosRtX.woff') format('woff');
+  src: url('GoudyBookletter1911');
 }
 
 body, h1, h2, ul, li, div, a, p {
 	color: $main-text;
-	font-family: 'Goudy Bookletter 1911', arial, serif;
+	font-family: 'Goudy Bookletter 1911', serif;
 	font-weight: 100;
 	}
 
@@ -87,9 +87,11 @@ h2	{
 
 body {
 	background-color:#eee8d5;
+    /*
     background-image:url(../images/background.png);
     background-image:url(../images/gradient.svg), url(../images/background.png);
-	background-position:top center, top center;
+	*/
+    background-position:top center, top center;
     background-repeat:no-repeat, repeat;
     background-size:100%, auto;
 	}

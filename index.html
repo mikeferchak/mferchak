@@ -29,10 +29,11 @@
 
 <body>
 
-<div id="stuff">
-   <header>
-      <h1>Mike's stupid internet page</h1>
+<header>
+      <h1 class="aa">Mike's stupid internet page</h1>
    </header>
+
+<div id="stuff">
    <section id="about">
       <div>
          <p>This is the personal Internet repository of all information belonging to the individual named “<a href="http://mferchak.com">Michael Ferchak</a>”. This is it. All of it. All other Michael Ferchak's or information pertaining to another person of that name should be consumed, enjoyed, and then forgotten about immediately.</p>
@@ -71,14 +72,14 @@
 </div>
 <script>
    $(document).ready(function() {
-      var bodyWidth = $("header").width();
+      var bodyWidth = $(document).width()-20;
       var originalHeaderWidth = $("header h1").outerWidth();
       var originalHeaderHeight = parseInt($("header h1").css("font-size"));
       var headerAspect = originalHeaderHeight / originalHeaderWidth;
       var newHeaderHeight = headerAspect * bodyWidth ;
       $("header h1").css("font-size", newHeaderHeight);
       $(window).resize(function() {
-            var bodyWidth = $("header").width();
+         var bodyWidth = $("header").width();
          var newHeaderHeight = headerAspect * bodyWidth;
          $("header h1").css("font-size", newHeaderHeight);
       });

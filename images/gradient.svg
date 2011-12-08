@@ -6,7 +6,7 @@
    <stop stop-opacity="0" stop-color="#fff" offset="1"/>
   </radialGradient>
   <radialGradient fy="0.04688" fx="0.50391" r="0.5" cy="0.04688" cx="0.50391" id="svg_6">
-   <stop stop-opacity=".3" stop-color="#fff" offset="0"/>
+   <stop stop-opacity=".4" stop-color="#fff" offset="0"/>
    <stop stop-opacity="0" stop-color="#fff" offset="1"/>
   </radialGradient>
  </defs>

@@ -51,7 +51,7 @@ footer div { display: inline-block; width: 33%; height: auto; vertical-align: to
 @media screen and (max-width: 820px) { body { width: 95%; margin: 0 auto; } }
 /* futurephones */
 @media screen and (max-width: 600px) { body { width: 95%; margin: 0 auto; }
-  h1 { font-size: 38pt; text-align: center; margin: 20px 0 -8px 0; }
+  h1 { font-size: 5pt; text-align: center; margin: 20px 0 -8px 0; white-space: normal; line-height: 1; }
   #about p { font-size: 16pt; margin: 1em 0.3em; }
   #about div { -moz-column-count: 1; -moz-column-gap: 20px; -webkit-column-count: 1; -webkit-column-gap: 20px; column-count: 1; column-gap: 20px; }
   footer div { display: block; width: 100%; } }

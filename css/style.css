@@ -54,7 +54,8 @@ h1 {
   overflow-y: hidden;
   white-space: nowrap;
   line-height: 200%;
-  color: white; }
+  color: white;
+  letter-spacing: -0.15em; }
 
 h2 {
   font-size: 24pt;
@@ -116,8 +117,6 @@ header {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   text-align: center;
   line-height: 200%; }
-  header h1 {
-    letter-spacing: 0px; }
 
 #about {
   margin: 1em 0;

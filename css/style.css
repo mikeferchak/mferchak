@@ -117,6 +117,14 @@ header {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   text-align: center;
   line-height: 200%; }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  header h1 {
+    letter-spacing: 0px; }
+=======
+>>>>>>> 80a13964a3a9870595679c9f7b2334458299f3c8
+>>>>>>> 778add79584dd33f7aa7c79b9a9ac00363ddbb85
 
 #about {
   margin: 1em 0;

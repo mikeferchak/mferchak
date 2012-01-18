@@ -12,36 +12,56 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
    <![endif]-->
    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-<!--script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-10986150-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script-->
+   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'></script>
+        <script type="text/javascript" src='https://raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js'></script>
+    <script src="script/application.js" type="text/javascript" charset="utf-8" async defer></script>
+   <script type="text/javascript">
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-10986150-1']);
+     _gaq.push(['_trackPageview']);
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
 </head>
 
 <body>
-
+<a title="Easter-egg! Drag this puppy around."><div id="sun"></div></a>
 <header>
-      <h1 class="aa">Mike's stupid internet page</h1>
+      <h1 class="aa">
+        <span class="shadowtext">M</span>
+        <span class="shadowtext">i</span>
+        <span class="shadowtext">k</span>
+        <span class="shadowtext">e</span>
+        <span class="shadowtext">'</span>
+        <span class="shadowtext">s</span>
+        <span class="shadowtext">&nbsp;</span>
+        <span class="shadowtext">s</span>
+        <span class="shadowtext">t</span>
+        <span class="shadowtext">u</span>
+        <span class="shadowtext">p</span>
+        <span class="shadowtext">i</span>
+        <span class="shadowtext">d</span>
+        <span class="shadowtext">&nbsp;</span>
+        <span class="shadowtext">i</span>
+        <span class="shadowtext">n</span>
+        <span class="shadowtext">t</span>
+        <span class="shadowtext">e</span>
+        <span class="shadowtext">r</span>
+        <span class="shadowtext">n</span>
+        <span class="shadowtext">e</span>
+        <span class="shadowtext">t</span>
+        <span class="shadowtext">&nbsp;</span>
+        <span class="shadowtext">p</span>
+        <span class="shadowtext">a</span>
+        <span class="shadowtext">g</span>
+        <span class="shadowtext">e</span>
+      </h1>
    </header>
 
 <div id="stuff">
-   <!--section id="about">
-      <div>
-         <p>This is the personal Internet repository of all information belonging to the individual named “<a href="http://mferchak.com">Michael Ferchak</a>”. This is it. All of it. All other Michael Ferchak's or information pertaining to another person of that name should be consumed, enjoyed, and then forgotten about immediately.</p>
-         <p>The owner and maintainer of this hypertext document prides himself in the making of
-         <a href="http://commonplacecoffee.com/" title="My most recent sexxxy website">sexxxy websites</a> that comply with only the strictest and bestest <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fmferchak.com&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0" title="OHHH YEAH">web standards</a>. Please send all <a href="http://www.spam.com/">Spam®</a> emails to <a href="mailto:mikeferchak@gmail.com" title="EMAIL!">mikeferchak at google mail dot com</a>. Don’t call me, I have an iPhone. </p>
-      </div>
-   </section-->
-
    <footer>
       <div>
          <h2>Contact:</h2>
@@ -70,27 +90,6 @@
    </footer>
 
 </div>
-<script>
-   $(document).ready(function() {
-      var bodyWidth = $(document).width()-20;
-      var originalHeaderWidth = $("header h1").outerWidth();
-      var originalHeaderHeight = parseInt($("header h1").css("font-size"));
-      var headerAspect = originalHeaderHeight / originalHeaderWidth;
 
-      //resize header on page load event
-      if ($(document).width() > 500) {
-         var newHeaderHeight = headerAspect * $(document).width() * .9;
-         $("header h1").css("font-size", newHeaderHeight);
-      }
-
-      //resize header when window is resized
-      $(window).resize(function() {
-         if ($(document).width() > 500) {
-            var newHeaderHeight = headerAspect * $(document).width() * .9;
-            $("header h1").css("font-size", newHeaderHeight);
-         }
-      });
-   });
-</script>
 </body>
 </html>

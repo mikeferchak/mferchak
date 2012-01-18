@@ -72,6 +72,7 @@ body, h1, h2, ul, li, div, a, p {
 	font-weight: 100;
 	}
 
+
 p {
 	font-size: 14pt;
 }
@@ -97,12 +98,12 @@ h2	{
 }
 
 body {
-	background-color:#eee8d5;
+	background-color:rgba(0,0,0,.5);
     background-image:url(../images/background.png);
-    background-image:url(../images/gradient.svg), url(../images/background.png);
+    _background-image:url(../images/gradient.svg), url(../images/background.png);
     background-position:top center, top center;
-    background-repeat:no-repeat, repeat;
-    background-size:100%, auto;
+    background-repeat:repeat;
+    background-size:auto;
 	}
 
 a:link, a:visited, a {
@@ -121,6 +122,23 @@ section {
     @include shadow;
 }
 
+#sun {
+    position:fixed;
+    bottom:0%;
+    height:200px;
+    width:200px;
+    display:block;
+    background-color:transparent;
+    background-repeat:no-repeat, repeat;
+    background-size:100%, auto;
+    cursor:move;
+    text-align:center;
+}
+#sun:after {
+    content:".";
+    font-size:5em;
+}
+
 
 #stuff {
     _width: $page-width;
@@ -130,7 +148,7 @@ section {
 }
 
 header {
-    padding: 12pt 12pt 0 12pt;
+    padding: 36pt 12pt 0 12pt;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-align:center;
     line-height:200%;

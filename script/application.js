@@ -7,25 +7,25 @@ $(document).ready(function() {
   //resize header on page load event
   if ($(document).width() > 500) {
      var newHeaderHeight = headerAspect * $(document).width() * .9;
-     $("header h1").css("font-size", newHeaderHeight);
+     $("header h1").css({"font-size": newHeaderHeight+15, "letter-spacing":"-5px"});
   }
 
   //resize header when window is resized
   $(window).resize(function() {
      if ($(document).width() > 500) {
         var newHeaderHeight = headerAspect * $(document).width() * .9;
-        $("header h1").css("font-size", newHeaderHeight);
+        $("header h1").css({"font-size": newHeaderHeight+15, "letter-spacing":"-5px"});
      }
      loopthroughallshadowelements();
      repositionlightsource();
   });
 
-var lsx = 500;
-var lsy = 0;
 var lsz = 1000;
 
-loopthroughallshadowelements();
+
 repositionlightsource();
+loopthroughallshadowelements();
+
 
 $('#sun').draggable( {
     cursor: 'move',

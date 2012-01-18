@@ -116,6 +116,8 @@ header {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   text-align: center;
   line-height: 200%; }
+  header h1 {
+    letter-spacing: 0px; }
 
 #about {
   margin: 1em 0;

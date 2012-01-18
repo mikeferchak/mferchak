@@ -26,7 +26,6 @@ var lsz = 1000;
 repositionlightsource();
 loopthroughallshadowelements();
 
-
 $('#sun').draggable( {
     cursor: 'move',
     containment: 'document',

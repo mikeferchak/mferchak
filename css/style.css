@@ -1,57 +1,195 @@
 /* This fancy-pants cascading stylesheet was mostly created by Mike '900px of cold hard steel' Ferchak */
-.collapsed { height: 20px; overflow: hidden; }
+.collapsed {
+  height: 20px;
+  overflow: hidden; }
 
 /* reset styles - Graciously provided by Dan Cederholm - http://simplebits.com/--------------------------------------------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; border: 0; outline: 0; background: transparent; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent; }
 
-ol, ul { list-style: none; }
+ol, ul {
+  list-style: none; }
 
-blockquote, q { quotes: none; }
+blockquote, q {
+  quotes: none; }
 
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 /* Laying down the basic crap */
-@font-face { font-family: 'Goudy Bookletter 1911'; font-style: normal; font-weight: normal; src: url("GoudyBookletter1911"); }
+@font-face {
+  font-family: 'Goudy Bookletter 1911';
+  font-style: normal;
+  font-weight: normal;
+  src: url("GoudyBookletter1911"); }
 
-body, h1, h2, ul, li, div, a, p { color: #214445; font-family: 'Goudy Bookletter 1911', serif; font-weight: 100; }
+body, h1, h2, ul, li, div, a, p {
+  color: #214445;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-weight: 100; }
 
-p { font-size: 14pt; }
+p {
+  font-size: 14pt; }
 
-h1 { font-family: 'futura', 'helvetica', sans-serif; font-size: 38pt; text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4); display: inline; margin: 0 auto; -webkit-transition: font-size 0.1s; -moz-transition: font-size 0.1s; -o-transition: font-size 0.1s; -k-transition: font-size 0.1s; transition: font-size 0.1s; text-align: center; overflow-x: hidden; overflow-y: hidden; white-space: nowrap; line-height: 200%; color: white; }
+h1 {
+  font-family: 'futura', 'helvetica', sans-serif;
+  font-size: 38pt;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  display: inline;
+  margin: 0 auto;
+  -webkit-transition: font-size 0.1s;
+  -moz-transition: font-size 0.1s;
+  -o-transition: font-size 0.1s;
+  -k-transition: font-size 0.1s;
+  transition: font-size 0.1s;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  line-height: 200%;
+  color: white; }
 
-h2 { font-size: 24pt; margin: 20px 0 -8px 0; }
+h2 {
+  font-size: 24pt;
+  margin: 20px 0 -8px 0; }
 
-body { background-color: #eee8d5; background-image: url(../images/background.png); background-image: url(../images/gradient.svg), url(../images/background.png); background-position: top center, top center; background-repeat: no-repeat, repeat; background-size: 100%, auto; }
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../images/background.png);
+  _background-image: url(../images/gradient.svg), url(../images/background.png);
+  background-position: top center, top center;
+  background-repeat: repeat;
+  background-size: auto; }
 
-a:link, a:visited, a { background-color: rgba(181, 137, 0, 0.1); text-decoration: none; -webkit-transition: background 0.2s; -moz-transition: background 0.2s; -o-transition: background 0.2s; -k-transition: background 0.2s; transition: background 0.2s; }
+a:link, a:visited, a {
+  background-color: rgba(181, 137, 0, 0.1);
+  text-decoration: none;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  -k-transition: background 0.2s;
+  transition: background 0.2s; }
 
-a:hover { background-color: rgba(181, 137, 0, 0.24); text-decoration: none; }
+a:hover {
+  background-color: rgba(181, 137, 0, 0.24);
+  text-decoration: none; }
 
-section { background-color: rgba(255, 255, 255, 0.5); -webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); -moz-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); -o-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); -k-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); }
+section {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+  -k-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); }
 
-#stuff { _width: 800px; #width: 800px; max-width: 800px; margin: 0 auto 3em; }
+#sun {
+  position: fixed;
+  bottom: 0%;
+  height: 200px;
+  width: 200px;
+  display: block;
+  background-color: transparent;
+  background-repeat: no-repeat, repeat;
+  background-size: 100%, auto;
+  cursor: move;
+  text-align: center; }
 
-header { padding: 12pt 12pt 0 12pt; text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); text-align: center; line-height: 200%; }
+#sun:after {
+  content: ".";
+  font-size: 5em; }
 
-#about { margin: 1em 0; padding: 1em; }
-#about div { -moz-column-count: 2; -moz-column-gap: 20px; -webkit-column-count: 2; -webkit-column-gap: 20px; column-count: 2; column-gap: 20px; }
-#about p { font-size: 17pt; }
+#stuff {
+  _width: 800px;
+  #width: 800px;
+  max-width: 800px;
+  margin: 0 auto 3em; }
 
-.loool { display: inline; }
+header {
+  padding: 36pt 12pt 0 12pt;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 200%; }
 
-.loool:hover { background-image: url(../images/looool2.png); background-repeat: no-repeat; background-position: 0px 5px; display: inline; padding: 0 0 0 30px; -webkit-transition: 0.2s ease-in; -moz-transition: 0.2s ease-in; -o-transition: 0.2s ease-in; -k-transition: 0.2s ease-in; transition: 0.2s ease-in; }
+#about {
+  margin: 1em 0;
+  padding: 1em; }
+  #about div {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px; }
+  #about p {
+    font-size: 17pt; }
 
-#lastfmrecords img { width: 48px; }
+.loool {
+  display: inline; }
 
-footer { margin: 0; padding: 0; }
+.loool:hover {
+  background-image: url(../images/looool2.png);
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  display: inline;
+  padding: 0 0 0 30px;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  -k-transition: 0.2s ease-in;
+  transition: 0.2s ease-in; }
 
-footer div { display: inline-block; width: 33%; height: auto; vertical-align: top; margin: 0 auto; text-align: center; text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); }
+#lastfmrecords img {
+  width: 48px; }
+
+footer {
+  margin: 0;
+  padding: 0; }
+
+footer div {
+  display: inline-block;
+  width: 33%;
+  height: auto;
+  vertical-align: top;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); }
 
 /* very small monitors */
-@media screen and (max-width: 820px) { body { width: 95%; margin: 0 auto; } }
+@media screen and (max-width: 820px) {
+  body {
+    width: 95%;
+    margin: 0 auto; } }
 /* futurephones */
-@media screen and (max-width: 600px) { body { width: 95%; margin: 0 auto; }
-  h1 { font-size: 5pt; text-align: center; margin: 20px 0 -8px 0; white-space: normal; line-height: 1; }
-  #about p { font-size: 16pt; margin: 1em 0.3em; }
-  #about div { -moz-column-count: 1; -moz-column-gap: 20px; -webkit-column-count: 1; -webkit-column-gap: 20px; column-count: 1; column-gap: 20px; }
-  footer div { display: block; width: 100%; } }
+@media screen and (max-width: 600px) {
+  body {
+    width: 95%;
+    margin: 0 auto; }
+
+  h1 {
+    font-size: 5pt;
+    text-align: center;
+    margin: 20px 0 -8px 0;
+    white-space: normal;
+    line-height: 1; }
+
+  #about p {
+    font-size: 16pt;
+    margin: 1em 0.3em; }
+  #about div {
+    -moz-column-count: 1;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 20px;
+    column-count: 1;
+    column-gap: 20px; }
+
+  footer div {
+    display: block;
+    width: 100%; } }

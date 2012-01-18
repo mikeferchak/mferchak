@@ -1,20 +1,20 @@
 $(document).ready(function() {
-  var bodyWidth = $(document).width()-20;
+  var bodyWidth = $(window).width()-20;
   var originalHeaderWidth = $("header h1").outerWidth();
   var originalHeaderHeight = parseInt($("header h1").css("font-size"));
   var headerAspect = originalHeaderHeight / originalHeaderWidth;
 
   //resize header on page load event
-  if ($(document).width() > 500) {
-     var newHeaderHeight = headerAspect * $(document).width() * .9;
-     $("header h1").css({"font-size": newHeaderHeight+15, "letter-spacing":"-5px"});
+  if ($(window).width() > 500) {
+     var newHeaderHeight = headerAspect * $(window).width() * .9;
+     $("header h1").css({"font-size": newHeaderHeight});
   }
 
   //resize header when window is resized
   $(window).resize(function() {
-     if ($(document).width() > 500) {
-        var newHeaderHeight = headerAspect * $(document).width() * .9;
-        $("header h1").css({"font-size": newHeaderHeight+15, "letter-spacing":"-5px"});
+     if ($(window).width() > 500) {
+        var newHeaderHeight = headerAspect * $(window).width() * .9;
+        $("header h1").css({"font-size": newHeaderHeight});
      }
      loopthroughallshadowelements();
      repositionlightsource();
@@ -34,7 +34,7 @@ $('#sun').draggable( {
 });
 
 function repositionlightsource() {
-    $("#sun").css({"left":(($(document).width()/2)-100)});
+    $("#sun").css({"left":(($(window).width()/2)-100)});
 };
 
 function loopthroughallshadowelements(){

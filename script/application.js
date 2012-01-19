@@ -5,14 +5,14 @@ $(document).ready(function() {
   var headerAspect = originalHeaderHeight / originalHeaderWidth;
 
   //resize header on page load event
-  if ($(window).width() > 500) {
+  if ($(window).width() > 100) {
      var newHeaderHeight = headerAspect * $(window).width() * .9;
      $("header h1").css({"font-size": newHeaderHeight});
   }
 
   //resize header when window is resized
   $(window).resize(function() {
-     if ($(window).width() > 500) {
+     if ($(window).width() > 100) {
         var newHeaderHeight = headerAspect * $(window).width() * .9;
         $("header h1").css({"font-size": newHeaderHeight});
      }
@@ -33,8 +33,15 @@ $('#sun').draggable( {
     stop: loopthroughallshadowelements
 });
 
+$('h1 span, ').draggable( {
+    cursor: 'move',
+    containment: 'document',
+    drag: calculateshadow,
+    stop: loopthroughallshadowelements
+});
+
 function repositionlightsource() {
-    $("#sun").css({"left":(($(window).width()/2)-100)});
+    $("#sun").css({"left":(($(window).width()/2)-50)});
 };
 
 function loopthroughallshadowelements(){

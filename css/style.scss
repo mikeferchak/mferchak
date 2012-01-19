@@ -124,10 +124,9 @@ section {
 }
 
 #sun {
-    position:fixed;
-    bottom:0%;
-    height:200px;
-    width:200px;
+    height:100px;
+    width:100px;
+    position:relative;
     display:block;
     background-color:transparent;
     background-repeat:no-repeat, repeat;

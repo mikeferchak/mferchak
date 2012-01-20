@@ -96,13 +96,14 @@ section {
   position: relative;
   display: block;
   background-color: transparent;
-  background-repeat: no-repeat, repeat;
-  background-size: 100%, auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
   cursor: move;
-  text-align: center; }
+  text-align: center;
+  background-image: url("../images/looool.png"); }
 
 #sun:after {
-  content: ".";
   font-size: 5em; }
 
 #stuff {

@@ -1,27 +1,38 @@
 $(document).ready(function() {
   var bodyWidth = $(window).width()-20;
   var originalHeaderWidth = $("header h1").outerWidth();
-  var originalHeaderHeight = parseInt($("header h1").css("font-size"));
+  var originalHeaderHeight = parseInt($("header h1").css("font-size"),10);
   var headerAspect = originalHeaderHeight / originalHeaderWidth;
+  var newHeaderHeight = headerAspect * bodyWidth * 0.9;
+  var iphoneWidth = 600;
 
-  //resize header on page load event
-  if ($(window).width() > 100) {
-     var newHeaderHeight = headerAspect * $(window).width() * .9;
-     $("header h1").css({"font-size": newHeaderHeight});
-  }
+  responsiveLol(iphoneWidth);
 
-  //resize header when window is resized
+  //do things when window is resized
   $(window).resize(function() {
-     if ($(window).width() > 100) {
-        var newHeaderHeight = headerAspect * $(window).width() * .9;
-        $("header h1").css({"font-size": newHeaderHeight});
-     }
-     loopthroughallshadowelements();
-     repositionlightsource();
+    responsiveLol(iphoneWidth);
+    loopthroughallshadowelements();
+    repositionlightsource();
   });
 
-var lsz = 1000;
+  function responsiveLol(width){
+    console.log("responsiveLol");
+    if ($(window).width() > width) {
+      resizeHeader(1);
+    }
+    else {
+      resizeHeader(2);
+    }
+  }
 
+  function resizeHeader(multiplier){
+    multiplier = typeof(multiplier) != 'undefined' ? multiplier : 1;
+    var newHeaderHeight = headerAspect * $(window).width() * 0.9 * multiplier;
+    $("header h1").css({"font-size": newHeaderHeight});
+  }
+
+
+var lsz = 1000;
 
 repositionlightsource();
 loopthroughallshadowelements();
@@ -42,11 +53,11 @@ $('h1 span, ').draggable( {
 
 function repositionlightsource() {
     $("#sun").css({"left":(($(window).width()/2)-50)});
-};
+}
 
 function loopthroughallshadowelements(){
-    $(".shadowbox, .shadowtext, .inset").each(calculateshadow);
-};
+    $(".shadowtext span").each(calculateshadow);
+}
 
 function calculateshadow(){
         var offset = $(this).offset();
@@ -68,15 +79,15 @@ function calculateshadow(){
         var darkness = 10 / (Math.sqrt(distance));
         var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
 
-        if( $(this).hasClass("shadowbox") )  {
+        if( $(this).parent().hasClass("shadowbox") )  {
             $(this).css('box-shadow',shadowvalue);
         }
-        if( $(this).hasClass("shadowtext") )  {
+        if( $(this).parent().hasClass("shadowtext") )  {
             $(this).css('text-shadow',shadowvalue);
         }
-        if( $(this).hasClass("inset") )  {
+        if( $(this).parent().hasClass("inset") )  {
             $(this).css('box-shadow','inset ' + shadowvalue);
         }
-  };
+  }
 
-  });
+});

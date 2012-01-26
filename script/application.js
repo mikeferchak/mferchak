@@ -4,25 +4,36 @@ $(document).ready(function() {
   var originalHeaderHeight = parseInt($("header h1").css("font-size"),10);
   var headerAspect = originalHeaderHeight / originalHeaderWidth;
   var newHeaderHeight = headerAspect * bodyWidth * 0.9;
-  var iphoneWidth = 600;
+  var ipadWidth = 800;
+  var iphoneWidth = 400;
 
-  responsiveLol(iphoneWidth);
+  responsiveLol(ipadWidth, iphoneWidth);
 
   //do things when window is resized
   $(window).resize(function() {
-    responsiveLol(iphoneWidth);
+    responsiveLol(ipadWidth, iphoneWidth);
     loopthroughallshadowelements();
     repositionlightsource();
   });
 
-  function responsiveLol(width){
+  function responsiveLol(ipad, iphone){
     //console.log("responsiveLol");
     //alert($(window).width());
-    if ($(window).width() > width) {
+    if ($(window).width() > ipad) {
+      $("header").removeClass("futurephone");
       resizeHeader(1);
     }
+    else if ($(window).width() > iphone) {
+      $("header").addClass("futurephone");
+      var originalHeaderWidth = $("header h1 span").first().outerWidth();
+      var originalHeaderHeight = parseInt($("header h1 span").first().css("font-size"),10);
+      resizeHeader(2);
+    }
     else {
-      //resizeHeader(2);
+      $("header").addClass("futurephone");
+      var originalHeaderWidth = $("header h1 span").first().outerWidth();
+      var originalHeaderHeight = parseInt($("header h1 span").first().css("font-size"),10);
+      resizeHeader(3);
     }
   }
 

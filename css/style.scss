@@ -205,8 +205,11 @@ footer div {
         text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
 }
 
-/* futurephones */
-@media screen and (max-width: 600px){
+
+
+
+/* iPad */
+@media screen and (max-width: 800px){
     body {
         width:98%;
         margin:0 auto;
@@ -214,11 +217,10 @@ footer div {
     header{
         padding:1em 0 1em 0em;
     }
-    h1  {
+    header.futurephone h1{
         display:block;
         white-space: normal;
         text-align:left;
-        font-size:4.5em;
         margin: 0em 0 0em 0;
         padding:0.3em;
         line-height: 0.9;
@@ -228,7 +230,7 @@ footer div {
             display:inline-block;
             margin:0;
             span{
-                @include transition(all 0.3s);
+                @include transition(all 0.1s);
             }
         }
     }
@@ -248,11 +250,26 @@ footer div {
         }
     }
     footer{
-        margin-left:1.4em;
+        margin-left:1.5em;
+        h2 {
+            font-size:3em;
+        }
+        div {
+            text-align:left;
+            display:block;
+            width:100%;
+        }
+        li {
+            font-size:1.5em;
+        }
     }
-    footer div {
-        text-align:left;
-        display:block;
-        width:100%;
+}
+
+@media screen and (max-width: 400px){
+    footer{
+        margin-left:1.5em;
+        h2 {
+            font-size:3em;
+        }
     }
 }

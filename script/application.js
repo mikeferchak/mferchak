@@ -16,17 +16,17 @@ $(document).ready(function() {
   });
 
   function responsiveLol(width){
-    console.log("responsiveLol");
+    //console.log("responsiveLol");
+    //alert($(window).width());
     if ($(window).width() > width) {
       resizeHeader(1);
     }
     else {
-      resizeHeader(2);
+      //resizeHeader(2);
     }
   }
 
   function resizeHeader(multiplier){
-    multiplier = typeof(multiplier) != 'undefined' ? multiplier : 1;
     var newHeaderHeight = headerAspect * $(window).width() * 0.9 * multiplier;
     $("header h1").css({"font-size": newHeaderHeight});
   }
@@ -44,12 +44,12 @@ $('#sun').draggable( {
     stop: loopthroughallshadowelements
 });
 
-$('h1 span, ').draggable( {
-    cursor: 'move',
-    containment: 'document',
-    drag: calculateshadow,
-    stop: loopthroughallshadowelements
-});
+// $('h1 span, ').draggable( {
+//     cursor: 'move',
+//     containment: 'document',
+//     drag: calculateshadow,
+//     stop: loopthroughallshadowelements
+// });
 
 function repositionlightsource() {
     $("#sun").css({"left":(($(window).width()/2)-50)});

@@ -38,7 +38,7 @@ $(document).ready(function() {
   }
 
   function resizeHeader(multiplier){
-    var newHeaderHeight = headerAspect * $(window).width() * 0.9 * multiplier;
+    var newHeaderHeight = headerAspect * $(window).width() * 1 * multiplier;
     $("header h1").css({"font-size": newHeaderHeight});
   }
 

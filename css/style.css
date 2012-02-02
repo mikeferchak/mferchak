@@ -38,6 +38,12 @@ body, h1, h2, ul, li, div, a, p {
 p {
   font-size: 14pt; }
 
+header {
+  padding: 36pt 0 0 0;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 200%; }
+
 h1 {
   font-family: 'futura', 'helvetica', sans-serif;
   font-size: 38pt;
@@ -113,12 +119,6 @@ section {
   #width: 1000px;
   max-width: 1000px;
   margin: 0 auto 3em; }
-
-header {
-  padding: 36pt 12pt 0 12pt;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-  text-align: center;
-  line-height: 200%; }
 
 #about {
   margin: 1em 0;

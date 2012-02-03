@@ -93,12 +93,10 @@ function calculateshadow(index, element, height, darknessFactor, type){
         var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
 
         if( type === "inset" )  {
-          $(element).css({'box-shadow': 'inset '+shadowvalue});
-          $(element).css({'background-image': awesomeGradient("0.8","0.2")});
+          $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.8","0.2")});
         }
         if(type === "box")  {
-          $(element).css('box-shadow',shadowvalue);
-          $(element).css({'background-image': awesomeGradient("1", "0.6")});
+          $(element).css({'box-shadow': shadowvalue, 'background-image': awesomeGradient("1","0.6")});
         }
         if(type === "text")  {
           $(element).css('text-shadow',shadowvalue);

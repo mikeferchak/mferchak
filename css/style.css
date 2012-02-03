@@ -46,15 +46,11 @@ header {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   text-align: center;
   line-height: 200%;
-  opacity: 0;
   -webkit-transition: opacity 3s;
   -moz-transition: opacity 3s;
   -o-transition: opacity 3s;
   -k-transition: opacity 3s;
   transition: opacity 3s; }
-
-header.pwned {
-  opacity: 1; }
 
 h1 {
   font-family: 'futura', 'helvetica', sans-serif;

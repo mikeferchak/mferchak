@@ -17,10 +17,9 @@ $(document).ready(function() {
   });
 
   function responsiveLol(ipad, iphone){
-    //console.log("responsiveLol");
-    //alert($(window).width());
     if ($(window).width() > ipad) {
       $("header").removeClass("futurephone");
+      $("header").addClass("pwned");
       resizeHeader(1);
     }
     else if ($(window).width() > iphone) {
@@ -40,10 +39,11 @@ $(document).ready(function() {
   function resizeHeader(multiplier){
     var newHeaderHeight = headerAspect * $(window).width() * 1 * multiplier;
     $("header h1").css({"font-size": newHeaderHeight});
+    $("header h1").fadeIn(2000);
   }
 
 
-var lsz = 1000;
+var lsz = 2000;
 
 repositionlightsource();
 loopthroughallshadowelements();
@@ -55,49 +55,61 @@ $('#sun').draggable( {
     stop: loopthroughallshadowelements
 });
 
-// $('h1 span, ').draggable( {
-//     cursor: 'move',
-//     containment: 'document',
-//     drag: calculateshadow,
-//     stop: loopthroughallshadowelements
-// });
-
 function repositionlightsource() {
     $("#sun").css({"left":(($(window).width()/2)-50)});
 }
 
 function loopthroughallshadowelements(){
-    $(".shadowtext span").each(calculateshadow);
+    $(".shadowtext span").each(function(index, element){
+      calculateshadow(index, element, "12", "1", "text");
+    });
+    $("footer div").each(function(index, element){
+      calculateshadow(index, element, "9", ".6", "box");
+    });
+    $("footer div a").each(function(index, element){
+      calculateshadow(index, element, "8", ".3", "inset");
+    });
 }
 
-function calculateshadow(){
-        var offset = $(this).offset();
+function calculateshadow(index, element, height, darknessFactor, type){
+        var offset = $(element).offset();
         var sunoffset = $('#sun').offset();
-        var bx = offset.left + ($(this).width()/2);
-        var by = offset.top + ($(this).height()/2);
-        var bz = 10;
+
+        var bx = offset.left + ($(element).width()/2);
+        var by = offset.top + ($(element).height()/2);
         var lsx = sunoffset.left + ($("#sun").width()/2);
         var lsy = sunoffset.top + ($("#sun").width()/2);
         var xdiff = lsx-bx;
         var ydiff = lsy-by;
-        var zdiff = lsz-bz;
+        var zdiff = lsz-height;
         var bxangle = Math.atan(xdiff/zdiff);
         var bzangle = Math.atan(ydiff/zdiff);
-        var bxoffset = Math.tan(bxangle) * bz;
-        var byoffset = Math.tan(bzangle) * bz;
+        var bxoffset = Math.tan(bxangle) * height;
+        var byoffset = Math.tan(bzangle) * height;
         var distance = Math.sqrt((xdiff*xdiff)+(ydiff*ydiff));
-        var blur = distance/60;
-        var darkness = 10 / (Math.sqrt(distance));
+
+        var blur = distance * height / 800;
+        var darkness = 20 * darknessFactor / (Math.sqrt(distance));
         var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
 
-        if( $(this).parent().hasClass("shadowbox") )  {
-            $(this).css('box-shadow',shadowvalue);
+        if( type === "inset" )  {
+          $(element).css({'box-shadow': 'inset '+shadowvalue});
+          $(element).css({'background-image': awesomeGradient("0.8","0.2")});
         }
-        if( $(this).parent().hasClass("shadowtext") )  {
-            $(this).css('text-shadow',shadowvalue);
+        if(type === "box")  {
+          $(element).css('box-shadow',shadowvalue);
+          $(element).css({'background-image': awesomeGradient("1", "0.6")});
         }
-        if( $(this).parent().hasClass("inset") )  {
-            $(this).css('box-shadow','inset ' + shadowvalue);
+        if(type === "text")  {
+          $(element).css('text-shadow',shadowvalue);
+        }
+
+        function awesomeGradient(opacity1, opacity2) {
+          if(!opacity1) {opacity = "1";}
+          if(!opacity2) {opacity = "0.6";}
+          return(
+            '-webkit-radial-gradient('+(lsx - offset.left)+'px '+(lsy - offset.top)+'px, 300px 300px, rgba(255, 255, 255, '+opacity1+'), rgba(247, 247, 247, '+opacity2+'))'
+          );
         }
   }
 

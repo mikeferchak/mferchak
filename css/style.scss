@@ -5,12 +5,20 @@
 $main-text: #214445;
 $page-width: 1000px;
 
-@mixin shadow {
-    -webkit-box-shadow: inset 0px 1px 6px rgba(0,0,0,0.2);
-       -moz-box-shadow: inset 0px 1px 6px rgba(0,0,0,0.2);
-         -o-box-shadow: inset 0px 1px 6px rgba(0,0,0,0.2);
-         -k-box-shadow: inset 0px 1px 6px rgba(0,0,0,0.2);
-            box-shadow: inset 0px 1px 6px rgba(0,0,0,0.2);
+@mixin shadow($x: 0px ,$y: 1px,$blur: 6px,$opacity: 0.2) {
+    -webkit-box-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+       -moz-box-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+         -o-box-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+         -k-box-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+            box-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+}
+
+@mixin textshadow($x:1px,$y:1px,$blur:1px,$opacity:0.2) {
+    -webkit-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+       -moz-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+         -o-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+         -k-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+            text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
 }
 
 @mixin transition($options){
@@ -19,6 +27,10 @@ $page-width: 1000px;
          -o-transition:$options;
          -k-transition:$options;
             transition:$options;
+}
+
+@mixin gradient(){
+    background-image: -webkit-radial-gradient(bottom center, 12em 6em, rgba(255, 255, 255, 1), rgba(247, 247, 247, 0.6));
 }
 
 .collapsed{
@@ -65,7 +77,6 @@ table {
 
 }
 
-
 body, h1, h2, ul, li, div, a, p {
 	color: $main-text;
 	font-family: 'Goudy Bookletter 1911', serif;
@@ -77,11 +88,20 @@ p {
 	font-size: 14pt;
 }
 
+div {
+    box-sizing: border-box;
+}
+
 header {
     padding: 36pt 0 0 0;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-align:center;
     line-height:200%;
+    opacity:0;
+    @include transition(opacity 3s);
+}
+header.pwned {
+    opacity:1;
 }
 
 h1	{
@@ -90,42 +110,44 @@ h1	{
     text-shadow: 1px 2px 4px rgba(0,0,0,.4);
     display:inline;
 	margin: 0 auto;
-    @include transition(font-size 0.3s);
+    // @include transition(font-size 0.3s);
     text-align: center;
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
     line-height:200%;
-    color:white;
     letter-spacing:-.15em;
     span.word {
         display:inline-block;
+        color:#FFFFFF;
     }
 }
 
 h2	{
 	font-size:24pt;
-	margin: 20px 0 -8px 0;
+	margin: 14px 0 0px 0;
 }
 
 body {
-	background-color:rgba(0,0,0,.5);
-    background-image:url(../images/background.png);
+	background-color:white;
+    background-image:url(../images/wood-bg.jpg);
     _background-image:url(../images/gradient.svg), url(../images/background.png);
     background-position:top center, top center;
     background-repeat:repeat;
     background-size:auto;
-	}
+}
 
 a:link, a:visited, a {
-    background-color:rgba(181, 137, 0, .1);
+    background-color:rgba(181, 137, 0, 0.1);
 	text-decoration:none;
-    @include transition(background .2s);
+    @include transition(all .2s);
+    @include shadow(0px,0px,0px,0);
 }
 
 a:hover {
-    background-color:rgba(181, 137, 0, .24);
+    background-color:rgba(181, 137, 0, 0.24);
     text-decoration:none;
+    @include shadow(0px,0px,0px,0);
 }
 
 section {
@@ -159,52 +181,65 @@ section {
 
 
 
-#about {
-	margin: 1em 0;
-    padding: 1em;
-    div{
-        -moz-column-count: 2;
-        -moz-column-gap: 20px;
-        -webkit-column-count: 2;
-        -webkit-column-gap: 20px;
-        column-count: 2;
-        column-gap: 20px;
-    }
-    p {
-        font-size:17pt;
-    }
-}
+// #about {
+// 	margin: 1em 0;
+//     padding: 1em;
+//     div{
+//         -moz-column-count: 2;
+//         -moz-column-gap: 20px;
+//         -webkit-column-count: 2;
+//         -webkit-column-gap: 20px;
+//         column-count: 2;
+//         column-gap: 20px;
+//     }
+//     p {
+//         font-size:17pt;
+//     }
+// }
 
-.loool {
-	display:inline;
-}
+// .loool {
+// 	display:inline;
+// }
 
-.loool:hover {
-	background-image:url(../images/looool2.png);
-	background-repeat:no-repeat;
-	background-position:0px 5px;
-	display:inline;
-	padding:0 0 0 30px;
-	@include transition(.2s ease-in);
-}
+// .loool:hover {
+// 	background-image:url(../images/looool2.png);
+// 	background-repeat:no-repeat;
+// 	background-position:0px 5px;
+// 	display:inline;
+// 	padding:0 0 0 30px;
+// 	@include transition(.2s ease-in);
+// }
 
-#lastfmrecords img {
-	width: 48px;
-}
+// #lastfmrecords img {
+// 	width: 48px;
+// }
 
 footer {
     margin:0;
     padding:0;
-}
-
-footer div {
+    div {
 		display:inline-block;
-		width:33%;
+		// width:33%;
 		height:auto;
 		vertical-align:top;
-		margin:0 auto;
+		// margin:0 auto;
 		text-align:center;
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+        @include textshadow(1px, 1px, 1px, 0.5);
+        width: 26%;
+        margin: 0 3.5%;
+        background-color: rgba(240, 240, 240, 0.1);
+        padding: 0 0 1.3em 0;
+        border-radius: 2pt;
+        @include gradient;
+        @include shadow;
+        ul li {
+            margin:.5em 0 0 0;
+            a {
+                padding:.1em .3em;
+            }
+        }
+    }
+
 }
 
 
@@ -213,7 +248,7 @@ footer div {
 /* iPad */
 @media screen and (max-width: 800px){
     body {
-        width:98%;
+        width:100%;
         margin:0 auto;
     }
     header{
@@ -237,29 +272,31 @@ footer div {
         }
     }
 
-    #about {
-        p {
-            font-size: 16pt;
-            margin: 1em 0.3em;
-        }
-        div{
-            -moz-column-count: 1;
-            -moz-column-gap: 20px;
-            -webkit-column-count: 1;
-            -webkit-column-gap: 20px;
-            column-count: 1;
-            column-gap: 20px;
-        }
-    }
+    // #about {
+    //     p {
+    //         font-size: 16pt;
+    //         margin: 1em 0.3em;
+    //     }
+    //     div{
+    //         -moz-column-count: 1;
+    //         -moz-column-gap: 20px;
+    //         -webkit-column-count: 1;
+    //         -webkit-column-gap: 20px;
+    //         column-count: 1;
+    //         column-gap: 20px;
+    //     }
+    // }
     footer{
-        margin-left:1.5em;
+        // margin-left:1.5em;
         h2 {
             font-size:3em;
         }
         div {
+            padding-left:2%;
             text-align:left;
             display:block;
-            width:100%;
+            width:96%;
+            margin:0 auto;
         }
         li {
             font-size:1.4em;
@@ -269,7 +306,10 @@ footer div {
 
 @media screen and (max-width: 400px){
     footer{
-        margin-left:1.5em;
+        div {
+            padding-left:1.5em;
+        }
+
         h2 {
             font-size:3em;
         }

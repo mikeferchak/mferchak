@@ -92,40 +92,8 @@ div {
     box-sizing: border-box;
 }
 
-header {
-    padding: 36pt 0 0 0;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-    text-align:center;
-    line-height:200%;
-    @include transition(opacity 3s);
-}
-
-h1	{
-    font-family: 'futura', 'helvetica', sans-serif;
-	font-size:38pt;
-    text-shadow: 1px 2px 4px rgba(0,0,0,.4);
-    display:inline;
-	margin: 0 auto;
-    // @include transition(font-size 0.3s);
-    text-align: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    white-space: nowrap;
-    line-height:200%;
-    letter-spacing:-.15em;
-    span.word {
-        display:inline-block;
-        color:#FFFFFF;
-    }
-}
-
-h2	{
-	font-size:24pt;
-	margin: 14px 0 0px 0;
-}
-
 body {
-	background-color:white;
+    background-color:white;
     background-image:url(../images/wood-bg.jpg);
     _background-image:url(../images/gradient.svg), url(../images/background.png);
     background-position:top center, top center;
@@ -135,7 +103,7 @@ body {
 
 a:link, a:visited, a {
     background-color:rgba(181, 137, 0, 0.1);
-	text-decoration:none;
+    text-decoration:none;
     @include transition(all .2s);
     @include shadow(0px,0px,0px,0);
 }
@@ -144,6 +112,35 @@ a:hover {
     background-color:rgba(181, 137, 0, 0.24);
     text-decoration:none;
     @include shadow(0px,0px,0px,0);
+}
+
+
+header {
+    padding: 29pt 0 12pt 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    text-align:center;
+    line-height:200%;
+    @include transition(opacity 3s);
+    zoom:100.1%;
+    h1  {
+        font-family: 'futura', 'helvetica', sans-serif;
+        font-size:38pt;
+        text-shadow: 1px 2px 4px rgba(0,0,0,.4);
+        display:inline;
+        margin: 0 auto;
+        // @include transition(font-size 0.3s);
+        text-align: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        line-height:200%;
+        letter-spacing:-0.17em;
+        span.word {
+            display:inline-block;
+            color:#FFFFFF;
+        }
+    }
+
 }
 
 section {
@@ -163,10 +160,15 @@ section {
     cursor:move;
     text-align:center;
     background-image:url("../images/sun.png");
-    background-size:100% 100%;
+    background-size:80% 80%;
+    zoom:100%;
+    @include transition(background-size 0.3s);
 }
 #sun:after {
     font-size:5em;
+}
+#sun.ui-draggable-dragging {
+    background-size:100% 100%;
 }
 
 #stuff {
@@ -174,70 +176,48 @@ section {
     #width: $page-width;
 	max-width: $page-width;
 	margin:0 auto 3em;
-}
 
-
-
-// #about {
-// 	margin: 1em 0;
-//     padding: 1em;
-//     div{
-//         -moz-column-count: 2;
-//         -moz-column-gap: 20px;
-//         -webkit-column-count: 2;
-//         -webkit-column-gap: 20px;
-//         column-count: 2;
-//         column-gap: 20px;
-//     }
-//     p {
-//         font-size:17pt;
-//     }
-// }
-
-// .loool {
-// 	display:inline;
-// }
-
-// .loool:hover {
-// 	background-image:url(../images/looool2.png);
-// 	background-repeat:no-repeat;
-// 	background-position:0px 5px;
-// 	display:inline;
-// 	padding:0 0 0 30px;
-// 	@include transition(.2s ease-in);
-// }
-
-// #lastfmrecords img {
-// 	width: 48px;
-// }
-
-footer {
-    margin:0;
-    padding:0;
-    div {
-		display:inline-block;
-		// width:33%;
-		height:auto;
-		vertical-align:top;
-		// margin:0 auto;
-		text-align:center;
-        @include textshadow(1px, 1px, 1px, 0.5);
-        width: 26%;
-        margin: 0 3.5%;
-        background-color: rgba(240, 240, 240, 0.6);
-        padding: 0 0 1.3em 0;
-        border-radius: 2pt;
-        @include gradient;
-        @include shadow;
-        ul li {
-            margin:.5em 0 0 0;
-            a {
-                padding:.1em .3em;
+    footer {
+        margin:0;
+        padding:0;
+        h2  {
+            margin: 0;
+            font-size: 30pt;
+            text-shadow: 1px 1px 1px white;
+            letter-spacing: .1em;
+        }
+        div {
+            display:inline-block;
+            // width:33%;
+            height:auto;
+            vertical-align:top;
+            // margin:0 auto;
+            text-align:center;
+            @include textshadow(1px, 1px, 1px, 0.5);
+            width: 26%;
+            margin: 1em 3.5%;
+            background-color: rgba(240, 240, 240, 0.6);
+            padding: 0 0 1.3em 0;
+            border-radius: 2.5pt;
+            @include gradient;
+            @include shadow;
+            ul li {
+                margin:.5em 0 0 0;
+                a {
+                    padding: .1em 2%;
+                    box-sizing: border-box;
+                    width: 88%;
+                    margin: .3em auto;
+                    display: block;
+                    border-radius: 2.5pt;
+                    overflow-x:hidden;
+                }
             }
         }
     }
-
 }
+
+
 
 
 
@@ -256,7 +236,7 @@ footer {
         white-space: normal;
         text-align:left;
         margin: 0em 0 0em 0;
-        padding:0.3em;
+        padding:0.3em 0% 0.4em 7%;
         line-height: 0.9;
         letter-spacing:-.18em;
         span.word{
@@ -268,49 +248,43 @@ footer {
             }
         }
     }
-
-    // #about {
-    //     p {
-    //         font-size: 16pt;
-    //         margin: 1em 0.3em;
-    //     }
-    //     div{
-    //         -moz-column-count: 1;
-    //         -moz-column-gap: 20px;
-    //         -webkit-column-count: 1;
-    //         -webkit-column-gap: 20px;
-    //         column-count: 1;
-    //         column-gap: 20px;
-    //     }
-    // }
-    footer{
-        // margin-left:1.5em;
-        h2 {
-            font-size:3em;
-        }
-        div {
-            padding-left:2%;
-            text-align:left;
-            display:block;
-            width:96%;
-            margin:0 auto;
-        }
-        li {
-            font-size:1.4em;
+    #stuff {
+        footer{
+                // margin-left:1.5em;
+                h2 {
+                    font-size:3em;
+                }
+                div {
+                    padding-left:4%;
+                    padding-right:4%;
+                    text-align:left;
+                    display:block;
+                    width:93%;
+                    margin:2em auto;
+                    ul li {
+                        font-size:1.4em;
+                        a {
+                            width: 100%;
+                            margin: .3em 0%;
+                        }
+                    }
+                }
         }
     }
 }
 
 @media screen and (max-width: 400px){
-    footer{
-        div {
-            padding-left:1.5em;
-            overflow-x:hidden;
-            margin-bottom:2em;
-        }
-
-        h2 {
-            font-size:3em;
+    #stuff {
+        footer{
+            div {
+                padding-left:6%;
+                padding-right:6%;
+                overflow-x:hidden;
+                margin-bottom:2em;
+            }
+            h2 {
+                font-size:3em;
+            }
         }
     }
 }

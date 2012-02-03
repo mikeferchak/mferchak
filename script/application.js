@@ -8,6 +8,7 @@ $(document).ready(function() {
   var iphoneWidth = 400;
 
   responsiveLol(ipadWidth, iphoneWidth);
+  rotateCrap();
 
   //do things when window is resized
   $(window).resize(function() {
@@ -42,6 +43,12 @@ $(document).ready(function() {
     $("header h1").fadeIn(2000);
   }
 
+  function rotateCrap(){
+    $("div, span").each(function(index, element){
+      var random = Math.random() - 0.5;
+      $(element).css({'-webkit-transform': 'rotate('+ (random) +'deg)'});
+    });
+  }
 
 var lsz = 2000;
 
@@ -51,6 +58,7 @@ loopthroughallshadowelements();
 $('#sun').draggable( {
     cursor: 'move',
     containment: 'document',
+    addClasses: 'dragging',
     drag: loopthroughallshadowelements,
     stop: loopthroughallshadowelements
 });
@@ -67,7 +75,7 @@ function loopthroughallshadowelements(){
       calculateshadow(index, element, "9", ".6", "box");
     });
     $("footer div a").each(function(index, element){
-      calculateshadow(index, element, "8", ".3", "inset");
+      calculateshadow(index, element, "3", ".3", "inset");
     });
 }
 
@@ -93,7 +101,7 @@ function calculateshadow(index, element, height, darknessFactor, type){
         var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
 
         if( type === "inset" )  {
-          $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.8","0.2")});
+          $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.6","0.2")});
         }
         if(type === "box")  {
           $(element).css({'box-shadow': shadowvalue, 'background-image': awesomeGradient("1","0.6")});

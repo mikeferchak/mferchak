@@ -41,37 +41,6 @@ p {
 div {
   box-sizing: border-box; }
 
-header {
-  padding: 36pt 0 0 0;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-  text-align: center;
-  line-height: 200%;
-  -webkit-transition: opacity 3s;
-  -moz-transition: opacity 3s;
-  -o-transition: opacity 3s;
-  -k-transition: opacity 3s;
-  transition: opacity 3s; }
-
-h1 {
-  font-family: 'futura', 'helvetica', sans-serif;
-  font-size: 38pt;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
-  display: inline;
-  margin: 0 auto;
-  text-align: center;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  white-space: nowrap;
-  line-height: 200%;
-  letter-spacing: -0.15em; }
-  h1 span.word {
-    display: inline-block;
-    color: #FFFFFF; }
-
-h2 {
-  font-size: 24pt;
-  margin: 14px 0 0px 0; }
-
 body {
   background-color: white;
   background-image: url(../images/wood-bg.jpg);
@@ -103,6 +72,33 @@ a:hover {
   -k-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0); }
 
+header {
+  padding: 29pt 0 12pt 0;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 200%;
+  -webkit-transition: opacity 3s;
+  -moz-transition: opacity 3s;
+  -o-transition: opacity 3s;
+  -k-transition: opacity 3s;
+  transition: opacity 3s;
+  zoom: 100.1%; }
+  header h1 {
+    font-family: 'futura', 'helvetica', sans-serif;
+    font-size: 38pt;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    line-height: 200%;
+    letter-spacing: -0.17em; }
+    header h1 span.word {
+      display: inline-block;
+      color: #FFFFFF; }
+
 section {
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
@@ -123,45 +119,64 @@ section {
   cursor: move;
   text-align: center;
   background-image: url("../images/sun.png");
-  background-size: 100% 100%; }
+  background-size: 80% 80%;
+  zoom: 100%;
+  -webkit-transition: background-size 0.3s;
+  -moz-transition: background-size 0.3s;
+  -o-transition: background-size 0.3s;
+  -k-transition: background-size 0.3s;
+  transition: background-size 0.3s; }
 
 #sun:after {
   font-size: 5em; }
+
+#sun.ui-draggable-dragging {
+  background-size: 100% 100%; }
 
 #stuff {
   _width: 1000px;
   #width: 1000px;
   max-width: 1000px;
   margin: 0 auto 3em; }
-
-footer {
-  margin: 0;
-  padding: 0; }
-  footer div {
-    display: inline-block;
-    height: auto;
-    vertical-align: top;
-    text-align: center;
-    -webkit-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -moz-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -o-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -k-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    width: 26%;
-    margin: 0 3.5%;
-    background-color: rgba(240, 240, 240, 0.6);
-    padding: 0 0 1.3em 0;
-    border-radius: 2pt;
-    background-image: -webkit-radial-gradient(bottom center, 12em 6em, white, rgba(247, 247, 247, 0.6));
-    -webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
-    -k-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); }
-    footer div ul li {
-      margin: .5em 0 0 0; }
-      footer div ul li a {
-        padding: .1em .3em; }
+  #stuff footer {
+    margin: 0;
+    padding: 0; }
+    #stuff footer h2 {
+      margin: 0;
+      font-size: 30pt;
+      text-shadow: 1px 1px 1px white;
+      letter-spacing: .1em; }
+    #stuff footer div {
+      display: inline-block;
+      height: auto;
+      vertical-align: top;
+      text-align: center;
+      -webkit-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+      -moz-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+      -o-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+      -k-text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+      text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+      width: 26%;
+      margin: 1em 3.5%;
+      background-color: rgba(240, 240, 240, 0.6);
+      padding: 0 0 1.3em 0;
+      border-radius: 2.5pt;
+      background-image: -webkit-radial-gradient(bottom center, 12em 6em, white, rgba(247, 247, 247, 0.6));
+      -webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+      -o-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+      -k-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2); }
+      #stuff footer div ul li {
+        margin: .5em 0 0 0; }
+        #stuff footer div ul li a {
+          padding: .1em 2%;
+          box-sizing: border-box;
+          width: 88%;
+          margin: .3em auto;
+          display: block;
+          border-radius: 2.5pt;
+          overflow-x: hidden; }
 
 /* iPad */
 @media screen and (max-width: 800px) {
@@ -177,7 +192,7 @@ footer {
     white-space: normal;
     text-align: left;
     margin: 0em 0 0em 0;
-    padding: 0.3em;
+    padding: 0.3em 0% 0.4em 7%;
     line-height: 0.9;
     letter-spacing: -0.18em; }
     header.futurephone h1 span.word {
@@ -191,20 +206,25 @@ footer {
         -k-transition: all 0.1s;
         transition: all 0.1s; }
 
-  footer h2 {
+  #stuff footer h2 {
     font-size: 3em; }
-  footer div {
-    padding-left: 2%;
+  #stuff footer div {
+    padding-left: 4%;
+    padding-right: 4%;
     text-align: left;
     display: block;
-    width: 96%;
-    margin: 0 auto; }
-  footer li {
-    font-size: 1.4em; } }
+    width: 93%;
+    margin: 2em auto; }
+    #stuff footer div ul li {
+      font-size: 1.4em; }
+      #stuff footer div ul li a {
+        width: 100%;
+        margin: .3em 0%; } }
 @media screen and (max-width: 400px) {
-  footer div {
-    padding-left: 1.5em;
+  #stuff footer div {
+    padding-left: 6%;
+    padding-right: 6%;
     overflow-x: hidden;
     margin-bottom: 2em; }
-  footer h2 {
+  #stuff footer h2 {
     font-size: 3em; } }

@@ -44,7 +44,7 @@ $(document).ready(function() {
   }
 
   function rotateCrap(){
-    $("div, span").each(function(index, element){
+    $("footer div, span").each(function(index, element){
       var random = Math.random() - 0.5;
       $(element).css({'-webkit-transform': 'rotate('+ (random) +'deg)'});
     });
@@ -96,7 +96,7 @@ function calculateshadow(index, element, height, darknessFactor, type){
         var byoffset = Math.tan(bzangle) * height;
         var distance = Math.sqrt((xdiff*xdiff)+(ydiff*ydiff));
 
-        var blur = distance * height / 800;
+        var blur = distance * height / 1500;
         var darkness = 20 * darknessFactor / (Math.sqrt(distance));
         var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
 

@@ -29,6 +29,11 @@ $page-width: 1000px;
             transition:$options;
 }
 
+@mixin compositing(){
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
 @mixin gradient(){
     background-image: -webkit-radial-gradient(bottom center, 12em 6em, rgba(255, 255, 255, 1), rgba(247, 247, 247, 0.6));
 }
@@ -77,6 +82,7 @@ body, h1, h2, ul, li, div, a, p {
 	color: $main-text;
 	font-family: 'Goudy Bookletter 1911', serif;
 	font-weight: 100;
+    -webkit-font-smoothing: antialiased;
 	}
 
 p {
@@ -114,13 +120,12 @@ header {
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-align:center;
     line-height:200%;
-    @include transition(opacity 3s);
-    zoom:100.1%;
+    @include transition(all 0.3s);
     h1  {
         font-family: 'futura', 'helvetica', sans-serif;
-        font-size:38pt;
+        font-size:12px;
         text-shadow: 1px 2px 4px rgba(0,0,0,.4);
-        display:inline;
+        display:inline-block;
         margin: 0 auto;
         // @include transition(font-size 0.3s);
         text-align: center;
@@ -154,15 +159,19 @@ section {
     cursor:move;
     text-align:center;
     background-image:url("../images/sun.png");
-    background-size:80% 80%;
-    zoom:100%;
-    @include transition(background-size 0.3s);
+    background-size:60% 60%;
+    @include transition(background-size 0.6s);
 }
 #sun:after {
     font-size:5em;
 }
 #sun.ui-draggable-dragging {
     background-size:100% 100%;
+    -webkit-filter: blur(0px) !important;
+}
+
+.blur {
+    -webkit-filter: blur(1px);
 }
 
 #stuff {
@@ -174,6 +183,7 @@ section {
     footer {
         margin:0;
         padding:0;
+        @include transition(all 0.3s);
         h2  {
             margin: 0;
             font-size: 30pt;
@@ -224,21 +234,22 @@ section {
     }
     header{
         padding:1em 0 1em 0em;
-    }
-    header.futurephone h1{
-        display:block;
-        white-space: normal;
         text-align:left;
-        margin: 0em 0 0em 0;
-        padding:0.3em 0% 0.4em 3%;
-        line-height: 0.9;
-        letter-spacing:-.18em;
-        span.word{
+        h1 {
+            white-space: normal;
             text-align:left;
-            display:inline-block;
-            margin:0;
-            span{
-                @include transition(all 0.1s);
+            overflow-x:hidden;
+            margin: 0em 0 0em 0;
+            padding:0.3em 0% 0.4em 5%;
+            line-height: 0.9;
+            letter-spacing:-.18em;
+            span.word {
+                text-align:left;
+                display:inline-block;
+                margin:0;
+                span{
+                    @include transition(all 0.1s);
+                }
             }
         }
     }

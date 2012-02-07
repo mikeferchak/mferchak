@@ -33,7 +33,8 @@ table {
 body, h1, h2, ul, li, div, a, p {
   color: #214445;
   font-family: 'Goudy Bookletter 1911', serif;
-  font-weight: 100; }
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased; }
 
 p {
   font-size: 14pt; }
@@ -77,17 +78,16 @@ header {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   text-align: center;
   line-height: 200%;
-  -webkit-transition: opacity 3s;
-  -moz-transition: opacity 3s;
-  -o-transition: opacity 3s;
-  -k-transition: opacity 3s;
-  transition: opacity 3s;
-  zoom: 100.1%; }
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -k-transition: all 0.3s;
+  transition: all 0.3s; }
   header h1 {
     font-family: 'futura', 'helvetica', sans-serif;
-    font-size: 38pt;
+    font-size: 12px;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
-    display: inline;
+    display: inline-block;
     margin: 0 auto;
     text-align: center;
     overflow-x: hidden;
@@ -119,19 +119,22 @@ section {
   cursor: move;
   text-align: center;
   background-image: url("../images/sun.png");
-  background-size: 80% 80%;
-  zoom: 100%;
-  -webkit-transition: background-size 0.3s;
-  -moz-transition: background-size 0.3s;
-  -o-transition: background-size 0.3s;
-  -k-transition: background-size 0.3s;
-  transition: background-size 0.3s; }
+  background-size: 60% 60%;
+  -webkit-transition: background-size 0.6s;
+  -moz-transition: background-size 0.6s;
+  -o-transition: background-size 0.6s;
+  -k-transition: background-size 0.6s;
+  transition: background-size 0.6s; }
 
 #sun:after {
   font-size: 5em; }
 
 #sun.ui-draggable-dragging {
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  -webkit-filter: blur(0px) !important; }
+
+.blur {
+  -webkit-filter: blur(1px); }
 
 #stuff {
   _width: 1000px;
@@ -140,7 +143,12 @@ section {
   margin: 0 auto 3em; }
   #stuff footer {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -k-transition: all 0.3s;
+    transition: all 0.3s; }
     #stuff footer h2 {
       margin: 0;
       font-size: 30pt;
@@ -185,26 +193,26 @@ section {
     margin: 0 auto; }
 
   header {
-    padding: 1em 0 1em 0em; }
-
-  header.futurephone h1 {
-    display: block;
-    white-space: normal;
-    text-align: left;
-    margin: 0em 0 0em 0;
-    padding: 0.3em 0% 0.4em 3%;
-    line-height: 0.9;
-    letter-spacing: -0.18em; }
-    header.futurephone h1 span.word {
+    padding: 1em 0 1em 0em;
+    text-align: left; }
+    header h1 {
+      white-space: normal;
       text-align: left;
-      display: inline-block;
-      margin: 0; }
-      header.futurephone h1 span.word span {
-        -webkit-transition: all 0.1s;
-        -moz-transition: all 0.1s;
-        -o-transition: all 0.1s;
-        -k-transition: all 0.1s;
-        transition: all 0.1s; }
+      overflow-x: hidden;
+      margin: 0em 0 0em 0;
+      padding: 0.3em 0% 0.4em 5%;
+      line-height: 0.9;
+      letter-spacing: -0.18em; }
+      header h1 span.word {
+        text-align: left;
+        display: inline-block;
+        margin: 0; }
+        header h1 span.word span {
+          -webkit-transition: all 0.1s;
+          -moz-transition: all 0.1s;
+          -o-transition: all 0.1s;
+          -k-transition: all 0.1s;
+          transition: all 0.1s; }
 
   #stuff footer h2 {
     font-size: 3em; }

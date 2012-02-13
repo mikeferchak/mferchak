@@ -1,5 +1,4 @@
 var backgroundURL;
-
 getBackgroundPhoto();
 
 function getBackgroundPhoto(){
@@ -10,6 +9,7 @@ function getBackgroundPhoto(){
         var randomItem = Math.floor(data.photoset.photo.length * Math.random());
         var item = data.photoset.photo[randomItem];
         var backgroundURL = 'http://farm'+ item.farm +'.staticflickr.com/'+item.server+'/'+item.id+'_'+item.secret+'_b.jpg';
+        $('body').css('background-image', 'url('+backgroundURL+')');
     });
 }
 
@@ -20,19 +20,15 @@ $(document).ready(function() {
   var headerAspect = originalHeaderHeight / originalHeaderWidth;
   var lsz = 2000; // Default height in px of the light source
 
-  // rotateCrap();
+  rotateCrap();
   doThings();
-  setBackgroundPhoto();
+  // setBackgroundPhoto();
 
   // Initialize all of the things
   function doThings(){
     responsiveHeader();
     repositionlightsource();
     loopthroughallshadowelements();
-  }
-
-  function setBackgroundPhoto(){
-    $('body').css('background-image', 'url('+pictureUrl+')');
   }
 
   // Do things when window is resized
@@ -55,7 +51,7 @@ $(document).ready(function() {
       resizeHeader(1); // normal screen
     }
     else if ($(window).width() > 400) {
-      resizeHeader(2.2); // ipad
+      resizeHeader(2); // ipad
     }
     else {
       resizeHeader(3.6); // iphone
@@ -88,8 +84,8 @@ $(document).ready(function() {
     $("footer div").each(function(index, element){
       calculateshadow(index, element, "9", ".4", "box");
     });
-    // $("footer div a").each(function(index, element){
-    //   calculateshadow(index, element, "3", ".3", "inset");
+    // $("footer div h2").each(function(index, element){
+    //   calculateshadow(index, element, "5", "1", "text-inset");
     // });
   }
 
@@ -97,7 +93,6 @@ $(document).ready(function() {
   function calculateshadow(index, element, height, darknessFactor, type){
     var offset = $(element).offset();
     var sunoffset = $('#sun').offset();
-
     var bx = offset.left + ($(element).width()/2);
     var by = offset.top + ($(element).height()/2);
     var lsx = sunoffset.left + ($("#sun").width()/2);
@@ -110,19 +105,21 @@ $(document).ready(function() {
     var bxoffset = Math.tan(bxangle) * height;
     var byoffset = Math.tan(bzangle) * height;
     var distance = Math.sqrt((xdiff*xdiff)+(ydiff*ydiff));
-
-    var blur = distance * height / 1500;
+    var blur = distance * height / 2000;
     var darkness = 20 * darknessFactor / (Math.sqrt(distance));
     var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
-
+    var shadowvalueLight = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(255,255,255,"+darkness+")";
     if( type === "inset" )  {
       $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.6","0.1")});
     }
     if(type === "box")  {
-      $(element).css({'box-shadow': 'inset '+ shadowvalue, 'background-image': awesomeGradient("0.8","0.2")});
+      $(element).css({'box-shadow': shadowvalue, 'background-image': awesomeGradient("0.8","0.2")});
     }
     if(type === "text")  {
       $(element).css({'text-shadow': shadowvalue});
+    }
+    if(type === "text-inset")  {
+      $(element).css({'text-shadow': shadowvalueLight});
     }
     function awesomeGradient(opacity1, opacity2) {
       if(!opacity1) {opacity = "1";}
@@ -132,18 +129,4 @@ $(document).ready(function() {
       );
     }
   }
-
-  function setBackgroundPhoto(){
-    var apiKey = 'b2969414c7c7419adb001b18f881a371';
-    var url = 'http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key='+ apiKey +'&user_id=mikeferchak&photoset_id=72157629217619129&format=json&privacy_filter=1&media=photos&jsoncallback=?';
-    $.getJSON(url, function(data){
-        console.log(data);
-        var randomItem = Math.floor(data.photoset.photo.length * Math.random());
-        var item = data.photoset.photo[randomItem];
-        var pictureUrl = 'http://farm'+ item.farm +'.staticflickr.com/'+item.server+'/'+item.id+'_'+item.secret+'_b.jpg';
-        $('body').css('background-image', 'url('+pictureUrl+')');
-        //$('img#background').attr('src', pictureUrl).addClass('active');
-    });
-  }
-
 });

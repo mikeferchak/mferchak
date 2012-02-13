@@ -1,21 +1,22 @@
 /* _animation.scss */
 @keyframes meatspin {
-    0%      {transform:rotate(-10deg); z-index:100;}
-    50%     {transform:rotate(10deg); z-index:100;}
-    100%    {transform:rotate(-10deg);}
-    }
-    @-webkit-keyframes meatspin {
-    0%      {-webkit-transform:rotate(-10deg); z-index:100;}
-    50%     {-webkit-transform:rotate(10deg); z-index:100;}
-    100%    {-webkit-transform:rotate(-10deg); z-index:100;}
-    }
-    @-moz-keyframes meatspin {
-    0%      {-moz-transform:rotate(0deg); z-index:100;}
-    50%     {-moz-transform:rotate(180deg); z-index:100;}
-    100%    {-moz-transform:rotate(360deg); z-index:100;}
-    }
-    @-ms-keyframes meatspin {
-    0%      {-ms-transform:rotate(0deg); z-index:100;}
-    50%     {-ms-transform:rotate(180deg); z-index:100;}
-    100%    {-ms-transform:rotate(360deg); z-index:100;}
-    }
+  0%      {transform:rotate(-5deg);}
+  50%     {transform:rotate(5deg);}
+  100%    {transform:rotate(-5deg);}
+  }
+  @-webkit-keyframes meatspin {
+  0%      {-webkit-transform:rotate(-5deg);}
+  50%     {-webkit-transform:rotate(5deg);}
+  100%    {-webkit-transform:rotate(-5deg);}
+  }
+  @-moz-keyframes meatspin {
+  0%      {-moz-transform:rotate(-5deg);}
+  50%     {-moz-transform:rotate(5deg);}
+  100%    {-moz-transform:rotate(-5deg);}
+  }
+  @-ms-keyframes meatspin {
+  0%      {-ms-transform:rotate(-5deg);}
+  50%     {-ms-transform:rotate(5deg);}
+  100%    {-ms-transform:rotate(-5deg);}
+  }
+

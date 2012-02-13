@@ -7,12 +7,12 @@
             box-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
 }
 
-@mixin textshadow($x:1px,$y:1px,$blur:1px,$opacity:0.2) {
-    -webkit-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
-       -moz-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
-         -o-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
-         -k-text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
-            text-shadow: inset $x $y $blur rgba(0,0,0,$opacity);
+@mixin textshadow($x:1px,$y:1px,$blur:1px,$color:black) {
+    -webkit-text-shadow: inset $x $y $blur $color;
+       -moz-text-shadow: inset $x $y $blur $color;
+         -o-text-shadow: inset $x $y $blur $color;
+         -k-text-shadow: inset $x $y $blur $color;
+            text-shadow: inset $x $y $blur $color;
 }
 
 @mixin transition($options){
@@ -21,6 +21,14 @@
          -o-transition:$options;
          -k-transition:$options;
             transition:$options;
+}
+
+@mixin transform($options){
+    -webkit-transform:$options;
+       -moz-transform:$options;
+         -o-transform:$options;
+         -k-transform:$options;
+            transform:$options;
 }
 
 @mixin perspective($size:400){
@@ -63,4 +71,11 @@
     animation-duration: $duration;
     animation-iteration-count: $count;
     // animation-timing-function: linear;
+}
+
+@mixin animation-none() {
+    -moz-animation:none;
+    -webkit-animation: none;
+    -ms-animation: none;
+    animation: none;
 }

@@ -62,18 +62,19 @@ body {
 
 header {
   @include transition(all 0.3s);
-  line-height:200%;
-  max-width: $page-width + 200;
-  margin: 0 auto;
-  padding: 29pt 0 12pt 0;
+  background-color: rgba(0,0,0,0.8);
+  margin: 90pt auto 0;
+  padding: 0pt 0 10pt 0;
   text-align:center;
+  width:100%;
   h1  {
     @include textshadow(1px, 2px, 4px, rgba(0,0,0,0.2));
     display:inline-block;
     font-family: 'futura', 'helvetica', sans-serif;
     font-size:12px;
-    line-height:200%;
+    line-height:160%;
     letter-spacing:-0.17em;
+    max-width: $page-width + 200;
     overflow-x: hidden;
     overflow-y: hidden;
     text-align: center;
@@ -89,7 +90,7 @@ header {
 
 #sun {
   @include animation(meatspin, 2s, infinite);
-  @include transform-style;
+  // @include transform-style;
   background-color:transparent;
   background-repeat:no-repeat;
   background-position:center center;
@@ -125,12 +126,12 @@ header {
     div {
       @include gradient;
       @include shadow;
-      background-color: rgba(249, 248, 245, 0.6);
+      background-color: rgba(249, 248, 245, .9);
       border-radius: 2.5pt;
       display:inline-block;
       height:auto;
-      margin: 1em 3.5%;
-      padding: 0 0 1.3em 0;
+      margin: 0em 3.5%;
+      padding: 0em 0 1.3em 0;
       text-align:center;
       vertical-align:top;
       width: 26%;

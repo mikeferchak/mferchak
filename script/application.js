@@ -74,15 +74,19 @@ $(document).ready(function() {
   // Center the light source when the page loads
   function repositionlightsource() {
     $("#sun").css({"left":(($(window).width()/2)-50)});
+    $("#sun").css({"bottom":"50px"});
   }
 
   // Loop through all of the shadowable elements, and call the shadow function
   function loopthroughallshadowelements(){
+    $("header").each(function(index, element){
+      calculateshadow(index, element, "30", "1", "inset");
+    });
     $(".shadowtext span").each(function(index, element){
       calculateshadow(index, element, "12", "1", "text");
     });
     $("footer div").each(function(index, element){
-      calculateshadow(index, element, "9", ".4", "box");
+      calculateshadow(index, element, "15", "0.9", "box");
     });
     // $("footer div h2").each(function(index, element){
     //   calculateshadow(index, element, "5", "1", "text-inset");
@@ -110,7 +114,7 @@ $(document).ready(function() {
     var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
     var shadowvalueLight = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(255,255,255,"+darkness+")";
     if( type === "inset" )  {
-      $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.6","0.1")});
+      $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.2","0")});
     }
     if(type === "box")  {
       $(element).css({'box-shadow': shadowvalue, 'background-image': awesomeGradient("0.8","0.2")});
@@ -125,7 +129,7 @@ $(document).ready(function() {
       if(!opacity1) {opacity = "1";}
       if(!opacity2) {opacity = "0.6";}
       return(
-        '-webkit-radial-gradient('+(lsx - offset.left)+'px '+(lsy - offset.top)+'px, 200px 200px, rgba(249, 248, 245, '+opacity1+'), rgba(247, 247, 247, '+opacity2+'))'
+        '-webkit-radial-gradient('+(lsx - offset.left)+'px '+(lsy - offset.top)+'px, 250px 250px, rgba(249, 248, 245, '+opacity1+'), rgba(247, 247, 247, '+opacity2+'))'
       );
     }
   }

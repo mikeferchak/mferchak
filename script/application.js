@@ -5,7 +5,7 @@ function getBackgroundPhoto(){
     var apiKey = 'b2969414c7c7419adb001b18f881a371';
     var url = 'http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key='+ apiKey +'&user_id=mikeferchak&photoset_id=72157629217619129&format=json&privacy_filter=1&media=photos&jsoncallback=?';
     $.getJSON(url, function(data){
-        console.log(data);
+        //console.log(data);
         var randomItem = Math.floor(data.photoset.photo.length * Math.random());
         var item = data.photoset.photo[randomItem];
         var backgroundURL = 'http://farm'+ item.farm +'.staticflickr.com/'+item.server+'/'+item.id+'_'+item.secret+'_b.jpg';
@@ -16,7 +16,8 @@ function getBackgroundPhoto(){
 
 $(document).ready(function() {
   var originalHeaderHeight = parseInt($("header h1").css("font-size"), 10);
-  var originalHeaderWidth = $("header h1").innerWidth();
+  var originalHeaderWidth = $("header h1 span.phrase").innerWidth();
+  console.log("originalHeaderWidth: "+originalHeaderWidth);
   var headerAspect = originalHeaderHeight / originalHeaderWidth;
   var lsz = 2000; // Default height in px of the light source
 
@@ -27,7 +28,7 @@ $(document).ready(function() {
   // Initialize all of the things
   function doThings(){
     responsiveHeader();
-    repositionlightsource();
+    // repositionlightsource();
     loopthroughallshadowelements();
   }
 
@@ -39,9 +40,9 @@ $(document).ready(function() {
   // Draggable light source
   $('#sun').draggable( {
     cursor: 'move',
-    containment: 'document',
+    // containment: 'document',
     addClasses: 'dragging',
-    drag: loopthroughallshadowelements,
+    drag: loopthroughsomeshadowelements,
     stop: loopthroughallshadowelements
   });
 
@@ -60,7 +61,7 @@ $(document).ready(function() {
 
   // Resizing that crap automatically
   function resizeHeader(sizeAdjustmentMultiplier){
-    newHeaderHeight = headerAspect * $("header").innerWidth() * sizeAdjustmentMultiplier;
+    newHeaderHeight = headerAspect * $("header h1").innerWidth() * sizeAdjustmentMultiplier;
     $("header h1").css({"font-size": newHeaderHeight});
   }
 
@@ -78,19 +79,39 @@ $(document).ready(function() {
   }
 
   // Loop through all of the shadowable elements, and call the shadow function
-  function loopthroughallshadowelements(){
+
+  function headerShadow() {
     $("header").each(function(index, element){
+      console.log("header shadow function");
       calculateshadow(index, element, "30", "1", "inset");
     });
+  }
+  function headertextShadow() {
     $(".shadowtext span").each(function(index, element){
       calculateshadow(index, element, "12", "1", "text");
     });
+  }
+  function footerShadow() {
     $("footer div").each(function(index, element){
       calculateshadow(index, element, "15", "0.9", "box");
     });
-    // $("footer div h2").each(function(index, element){
-    //   calculateshadow(index, element, "5", "1", "text-inset");
-    // });
+  }
+  function footertextShadow() {
+    $("footer div h2, footer div a").each(function(index, element){
+      calculateshadow(index, element, "10", "1", "text-inset");
+    });
+  }
+
+  function loopthroughallshadowelements(){
+    headerShadow();
+    headertextShadow();
+    footerShadow();
+    footertextShadow();
+  }
+
+  function loopthroughsomeshadowelements(){
+    headerShadow();
+    footerShadow();
   }
 
   // Figure out them shadows

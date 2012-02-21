@@ -69,16 +69,19 @@ header {
   width:100%;
   h1  {
     @include textshadow(1px, 2px, 4px, rgba(0,0,0,0.2));
-    display:inline-block;
+    display:block;
     font-family: 'futura', 'helvetica', sans-serif;
     font-size:12px;
     line-height:160%;
     letter-spacing:-0.17em;
-    max-width: $page-width + 200;
+    margin:0 auto;
+    max-width: $page-width + 400;
     overflow-x: hidden;
     overflow-y: hidden;
     text-align: center;
     white-space: nowrap;
+    span.phrase {
+    }
     span.word {
       display:inline-block;
       color: #F9F8F5;
@@ -89,8 +92,6 @@ header {
 
 
 #sun {
-  @include animation(meatspin, 2s, infinite);
-  // @include transform-style;
   background-color:transparent;
   background-repeat:no-repeat;
   background-position:center center;
@@ -98,12 +99,16 @@ header {
   background-image:url("../images/sun.png");
   background-size:60px 60px;
   cursor:move;
-  display:block;
+  // display:block;
   height:100px;
   overflow:hidden;
+  margin:0 auto;
   text-align:center;
   width:100px;
   @include transition(background-size 0.6s);
+  &:hover {
+    @include animation(meatspin, 2s, infinite);
+  }
 }
 
 #sun.ui-draggable-dragging {

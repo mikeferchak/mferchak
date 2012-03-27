@@ -1,0 +1,115 @@
+!!! 5
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ]    <html lang="en" class="no-js ie7">
+/[if IE 8 ]    <html lang="en" class="no-js ie8">
+/[if IE 9 ]    <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+%head
+  %meta{:charset => "utf-8"}/
+  %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+  %meta{ :name => "description", :content => "The place for all things Mike-Ferchak-y."}/
+  %meta{ :name => "keywords", :content => "Web design, web, designer, Pittsburgh"}/
+  %meta{ :name => "author", :content => "Mike Ferchak"}/
+  %title The place for all things Mike Ferchak-y
+  %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
+  %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+  %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+  = stylesheet_link_tag :style
+  = javascript_include_tag 'modernizr'
+  = javascript_include_tag 'jquery'
+  = javascript_include_tag 'jquery-ui'
+  = javascript_include_tag 'application'
+  = javascript_include_tag 'jquery.ui.touch-punch-min.js'
+  = csrf_meta_tag
+
+%body
+  %header
+    %h1.aa.shadowtext
+      %span.phrase
+        %span.word
+          %span M
+          %span i
+          %span k
+          %span e
+          %span '
+          %span s
+          %span &nbsp;
+        %span.word
+          %span s
+          %span t
+          %span u
+          %span p
+          %span i
+          %span d
+          %span &nbsp;
+        %span.word
+          %span i
+          %span n
+          %span t
+          %span e
+          %span r
+          %span n
+          %span e
+          %span t
+          %span &nbsp;
+        %span.word
+          %span p
+          %span a
+          %span g
+          %span e
+          %span &nbsp;
+
+  #stuff
+    %section#about
+      %iProudly breaking IE6 since 2001.
+     %footer.shadowbox
+        #contact
+           %h2 Contact
+           %ul
+              %li
+                link_to "mikeferchak at google mail dot com", 'mailto:mikeferchak_spam@gmail.com'
+              %li
+                link_to 'my awesome website', '.'
+        #code
+           %h2 Code
+           %ul
+              %li
+                link_to 'github.com/mikeferchak', "http://github.com/mikeferchak"
+              %li
+                link_to 'ferchakhax.tumblr.com', 'http://ferchakhax.tumblr.com'
+        #creep
+           %h2 Creep
+           %ul
+              %li
+                link_to 'twitter.com/mikeferchak', 'http://twitter.com/mikeferchak'
+              %li
+                link_to 'last.fm/user/thediabeetus', 'http://last.fm/user/thediabeetus'
+              %li
+                link_to 'facebook.com/mikeferchak', 'http://facebook.com/mikeferchak'
+              %li
+                link_to 'cafepress.com/sk/captainpancakes', 'http://cafepress.com/sk/captainpancakes'
+              %li
+                link_to 'vimeo.com/user609468', 'http://vimeo.com/user609468'
+              %li
+                link_to 'levlr.com/mike', 'http://levlr.com/mike'
+  #sun
+
+/[if lt IE 7 ]
+  <script src="js/dd_belatedpng.js?"></script>
+  <script>
+  \  //fix those png IMGs and .png_bg background-images
+  \  DD_belatedPNG.fix('img, .png_bg');
+  </script>
+/ yui profiler and profileviewer - remove for production
+/ %script{:src => "js/profiling/yahoo-profiling.min.js?"}
+/ %script{:src => "js/profiling/config.js?v=1"}
+/ end profiling code
+:javascript
+  var _gaq = [['_setAccount', 'UA-10986150-1'], ['_trackPageview']];
+  (function(d, t) {
+   var g = d.createElement(t),
+       s = d.getElementsByTagName(t)[0];
+   g.async = true;
+   g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   s.parentNode.insertBefore(g, s);
+  })(document, 'script');

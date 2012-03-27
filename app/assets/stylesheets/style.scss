@@ -1,0 +1,12 @@
+/* This fancy-pants cascading stylesheet was mostly created by Mike '1000px of cold hard steel' Ferchak */
+@import "compass";
+
+$main-text: #214445;
+$page-width: 1000px;
+
+@import "mixin";
+@import "animation";
+@import "reset";
+@import "main";
+@import "ipad";
+@import "iphone";

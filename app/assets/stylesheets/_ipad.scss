@@ -1,0 +1,52 @@
+/* _ipad.scss */
+@media screen and (max-width: 800px){
+    body {
+        width:100%;
+        margin:0 auto;
+    }
+    header{
+        margin:0 0 1em 0;
+        padding:1em 0em 1em 0em;
+        text-align:left;
+        h1 {
+            white-space: normal;
+            text-align:left;
+            overflow-x:hidden;
+            margin: 0em 0 0em 0;
+            padding:0.3em 0% 0.4em 5%;
+            line-height: 0.9;
+            letter-spacing:-.18em;
+            span.word {
+                text-align:left;
+                display:inline-block;
+                margin:0;
+                span{
+                    @include transition(all 0.1s);
+                }
+            }
+        }
+    }
+    #stuff {
+        footer{
+                // margin-left:1.5em;
+                h2 {
+                    font-size:3em;
+                }
+                div {
+                    padding-left:4%;
+                    padding-right:4%;
+                    text-align:left;
+                    display:block;
+                    width:93%;
+                    margin:2em auto;
+                    ul li {
+                        font-size:1.4em;
+                        a {
+                            width: 100%;
+                            margin: .3em 0%;
+                        }
+                    }
+                }
+        }
+    }
+}

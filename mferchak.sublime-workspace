@@ -152,10 +152,26 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "app/views/home/index.html.haml",
 			"settings":
 			{
-				"buffer_size": 3893,
+				"buffer_size": 1739,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.haml",
+			"settings":
+			{
+				"buffer_size": 1555,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/style.scss",
+			"settings":
+			{
+				"buffer_size": 273,
 				"line_ending": "Unix"
 			}
 		}
@@ -236,6 +252,13 @@
 	},
 	"file_history":
 	[
+		"/Users/ferchak/Dropbox/www/mferchak/app/assets/stylesheets/_main.scss",
+		"/Users/ferchak/Dropbox/www/mferchak/app/views/layouts/application.html.haml",
+		"/Users/ferchak/Dropbox/www/mferchak/config/routes.rb",
+		"/Users/ferchak/Dropbox/www/mferchak/Gemfile",
+		"/Users/ferchak/Dropbox/www/mferchak/public/index.html.haml",
+		"/Library/WebServer/Documents/mferchak/public/index.html.haml",
+		"/Users/ferchak/Dropbox/www/mferchak/index.html",
 		"/Users/ferchak/Dropbox/www/mferchak/css/_ipad.scss",
 		"/Users/ferchak/Dropbox/www/mferchak/css/_iphone.scss",
 		"/Users/ferchak/Dropbox/www/mferchak/css/_mixin.scss",
@@ -243,7 +266,6 @@
 		"/Users/ferchak/Dropbox/www/mferchak/css/_animation.scss",
 		"/Users/ferchak/Dropbox/www/mferchak/css/_reset.scss",
 		"/Users/ferchak/Dropbox/www/mferchak/css/style.scss",
-		"/Users/ferchak/Dropbox/www/mferchak/index.html",
 		"/Users/ferchak/Dropbox/www/mferchak/script/application.js",
 		"/Library/WebServer/Documents/mferchak/a-text.html",
 		"/Library/WebServer/Documents/mferchak/script/jquery.ui.touch-punch-min.js",
@@ -357,13 +379,7 @@
 		"/Users/ferchak/www/commonplace/supplies/index.html",
 		"/Users/ferchak/www/commonplace/roasting/index.html",
 		"/Users/ferchak/www/commonplace/wholesale/index.html",
-		"/Users/ferchak/www/commonplace/equipment/index.html",
-		"/Users/ferchak/www/commonplace/stylesheets/main.css",
-		"/Users/ferchak/www/commonplace/index.html",
-		"/lm-demo/public/stylesheets/cxo.css",
-		"/lm-demo/app/views/shared/widgets/_account_news.html.erb",
-		"/lm-demo/app/views/shared/widgets/_product_news.html.erb",
-		"/lm-demo/app/views/shared/widgets/_industry_news.html.erb"
+		"/Users/ferchak/www/commonplace/equipment/index.html"
 	],
 	"find":
 	{
@@ -374,6 +390,8 @@
 		"height": 102.0,
 		"where_history":
 		[
+			"<open files>",
+			"application.html.haml",
 			"_animation.scss",
 			""
 		]
@@ -383,6 +401,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"link_to",
 			"relative",
 			"reposition",
 			"header",
@@ -509,8 +528,7 @@
 			"siebel_contact",
 			"SiebelContact",
 			"siebel_contact_store",
-			"siebel",
-			"backend"
+			"siebel"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -518,6 +536,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"= link_to",
 			"5deg",
 			"   ",
 			" ",
@@ -540,23 +559,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "app/views/home/index.html.haml",
 					"settings":
 					{
-						"buffer_size": 3893,
+						"buffer_size": 1739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								730,
+								730
 							]
 						],
 						"settings":
@@ -610,9 +629,161 @@
 								"Python Django": "python"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/layouts/application.html.haml",
+					"settings":
+					{
+						"buffer_size": 1555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								779,
+								779
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/style.scss",
+					"settings":
+					{
+						"buffer_size": 273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -664,6 +835,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
 			[
 				"style.",
 				"mferchak/css/style.css"

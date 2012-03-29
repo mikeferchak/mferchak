@@ -171,7 +171,15 @@
 			"file": "app/assets/stylesheets/style.scss",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 824,
 				"line_ending": "Unix"
 			}
 		}
@@ -721,15 +729,15 @@
 					"file": "app/assets/stylesheets/style.scss",
 					"settings":
 					{
-						"buffer_size": 273,
+						"buffer_size": 274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								123,
-								123
+								125,
+								125
 							]
 						],
 						"settings":
@@ -790,6 +798,81 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -836,12 +919,12 @@
 		"selected_items":
 		[
 			[
-				"routes",
-				"config/routes.rb"
-			],
-			[
 				"gem",
 				"Gemfile"
+			],
+			[
+				"routes",
+				"config/routes.rb"
 			],
 			[
 				"style.",
@@ -1104,12 +1187,12 @@
 				"/Users/ferchak/Dropbox/vivisimo/skunk/display/display.sublime-project"
 			],
 			[
-				"og",
-				"/Users/ferchak/Dropbox/vivisimo/greece/greece.sublime-project"
-			],
-			[
 				"mfer",
 				"/Users/ferchak/Dropbox/www/mferchak/mferchak.sublime-project"
+			],
+			[
+				"og",
+				"/Users/ferchak/Dropbox/vivisimo/greece/greece.sublime-project"
 			],
 			[
 				"pg",

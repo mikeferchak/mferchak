@@ -130,4 +130,5 @@ DEPENDENCIES
   rails (= 3.2.2)
   sass-rails
   sqlite3
+  tilt
   uglifier (>= 1.0.3)

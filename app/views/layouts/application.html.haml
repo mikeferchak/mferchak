@@ -21,7 +21,7 @@
   = javascript_include_tag 'jquery.ui.touch-punch-min.js'
   = csrf_meta_tag
 
-%body
+%body{:class => controller_name}
 
   =yield
 

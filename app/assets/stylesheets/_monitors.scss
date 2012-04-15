@@ -1,0 +1,26 @@
+@media screen and (max-width: 9999px){
+    header h1 { font-size: 102px;}
+}
+
+@media screen and (max-width: 1300px){
+    header h1 { font-size: 94px;}
+}
+
+@media screen and (max-width: 1200px){
+    header h1 { font-size: 86px;}
+}
+
+@media screen and (max-width: 1100px){
+    header h1 { font-size: 78px;}
+    #stuff footer h2 {font-size: 26pt;}
+}
+
+@media screen and (max-width: 1000px){
+    header h1 { font-size: 70px;}
+    #stuff footer h2 {font-size: 23pt;}
+}
+
+@media screen and (max-width: 900px){
+    header h1 { font-size: 62px;}
+    #stuff footer h2 {font-size: 21pt;}
+}

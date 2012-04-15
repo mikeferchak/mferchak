@@ -1,34 +1,29 @@
 var backgroundURL;
-getBackgroundPhoto();
 
-function getBackgroundPhoto(){
-    var apiKey = 'b2969414c7c7419adb001b18f881a371';
-    var url = 'http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key='+ apiKey +'&user_id=mikeferchak&photoset_id=72157629217619129&format=json&privacy_filter=1&media=photos&jsoncallback=?';
-    $.getJSON(url, function(data){
-        //console.log(data);
-        var randomItem = Math.floor(data.photoset.photo.length * Math.random());
-        var item = data.photoset.photo[randomItem];
-        var backgroundURL = 'http://farm'+ item.farm +'.staticflickr.com/'+item.server+'/'+item.id+'_'+item.secret+'_b.jpg';
-        $('body').css('background-image', 'url('+backgroundURL+')');
-    });
-}
+//getBackgroundPhoto();
+
+// function getBackgroundPhoto(){
+//     var apiKey = 'b2969414c7c7419adb001b18f881a371';
+//     var url = 'http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key='+ apiKey +'&user_id=mikeferchak&photoset_id=72157629217619129&format=json&privacy_filter=1&media=photos&jsoncallback=?';
+//     $.getJSON(url, function(data){
+//         //console.log(data);
+//         var randomItem = Math.floor(data.photoset.photo.length * Math.random());
+//         var item = data.photoset.photo[randomItem];
+//         var backgroundURL = 'http://farm'+ item.farm +'.staticflickr.com/'+item.server+'/'+item.id+'_'+item.secret+'_b.jpg';
+//         $('body').css('background-image', 'url('+backgroundURL+')');
+//     });
+// }
 
 
 $(document).ready(function() {
-  var originalHeaderHeight = parseInt($("header h1").css("font-size"), 10);
-  var originalHeaderWidth = $("header h1 span.phrase").innerWidth();
-  console.log("originalHeaderWidth: "+originalHeaderWidth);
-  var headerAspect = originalHeaderHeight / originalHeaderWidth;
-  var lsz = 2000; // Default height in px of the light source
+  var lsz = 1000; // Default height in px of the light source
 
   rotateCrap();
   doThings();
-  // setBackgroundPhoto();
 
   // Initialize all of the things
   function doThings(){
-    responsiveHeader();
-    // repositionlightsource();
+    repositionlightsource();
     loopthroughallshadowelements();
   }
 
@@ -45,25 +40,6 @@ $(document).ready(function() {
     stop: loopthroughallshadowelements
   });
 
-  // Responsive giant header
-  function responsiveHeader(){
-    if ($(window).width() > 800) {
-      resizeHeader(1); // normal screen
-    }
-    else if ($(window).width() > 400) {
-      resizeHeader(2); // ipad
-    }
-    else {
-      resizeHeader(3.6); // iphone
-    }
-  }
-
-  // Resizing that crap automatically
-  function resizeHeader(sizeAdjustmentMultiplier){
-    newHeaderHeight = headerAspect * $("header h1").innerWidth() * sizeAdjustmentMultiplier;
-    $("header h1").css({"font-size": newHeaderHeight});
-  }
-
   // Rotate all of the things a little bit
   function rotateCrap(){
     $("footer div, span").each(function(index, element){
@@ -74,11 +50,9 @@ $(document).ready(function() {
   // Center the light source when the page loads
   function repositionlightsource() {
     $("#sun").css({"left":(($(window).width()/2)-50)});
-    $("#sun").css({"bottom":"50px"});
   }
 
   // Loop through all of the shadowable elements, and call the shadow function
-
   function headerShadow() {
     $("header").each(function(index, element){
       console.log("header shadow function");
@@ -129,8 +103,8 @@ $(document).ready(function() {
     var bxoffset = Math.tan(bxangle) * height;
     var byoffset = Math.tan(bzangle) * height;
     var distance = Math.sqrt((xdiff*xdiff)+(ydiff*ydiff));
-    var blur = distance * height / 2000;
-    var darkness = 20 * darknessFactor / (Math.sqrt(distance));
+    var blur = distance * height / 1000;
+    var darkness = 15 * darknessFactor / (Math.sqrt(distance));
     var shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")";
     var shadowvalueLight = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(255,255,255,"+darkness+")";
     if( type === "inset" )  {

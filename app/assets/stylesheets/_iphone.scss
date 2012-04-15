@@ -1,16 +1,51 @@
 /* _iphone.scss*/
+
+@media screen and (max-width: 700px){
+  header h1 { font-size: 98px; }
+}
+
+@media screen and (max-width: 600px){
+  header h1 { font-size: 80px; } 
+}
+
+@media screen and (max-width: 500px){
+  header h1 { font-size: 65px; }
+}
+
 @media screen and (max-width: 400px){
+    header {
+      h1 {
+        font-size: 58px;
+      }
+    }
     #stuff {
+
         footer{
             div {
                 padding-left:6%;
                 padding-right:6%;
                 overflow-x:hidden;
                 margin-bottom:2em;
+                ul {
+                  li {
+                    font-size: 1.1em;
+                    margin: 0;
+                    a {
+                      padding: 0.4em 2%;
+                      margin: 0 auto;
+                      overflow-x:hidden;
+                    }
+                  }
+                }
             }
             h2 {
-                font-size:3em;
+                font-size:2em;
             }
         }
     }
 }
+
+
+
+
+

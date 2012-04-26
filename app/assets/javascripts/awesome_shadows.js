@@ -1,55 +1,23 @@
 //awesome_shadows.js
 
-
-// Draggable light source
-$('#sun').draggable( {
-  cursor: 'move',
-  addClasses: 'dragging',
-  drag: loopthroughsomeshadowelements,
-  stop: loopthroughallshadowelements
-});
-
 // Center the light source when the page loads
 function repositionlightsource() {
   $("#sun").css({"left":(($(window).width()/2)-50)});
 }
 
-// Loop through all of the shadowable elements, and call the shadow function
-function headerShadow() {
-  $("header").each(function(index, element){
-    console.log("header shadow function");
-    calculateshadow(index, element, "30", "1", "inset");
-  });
-}
-
-function headertextShadow() {
-  $(".shadowtext span").each(function(index, element){
-    calculateshadow(index, element, "12", "1", "text");
-  });
-}
-
-function footerShadow() {
-  $("footer div").each(function(index, element){
-    calculateshadow(index, element, "15", "0.9", "box");
-  });
-}
-
-function footertextShadow() {
-  $("footer div h2, footer div a").each(function(index, element){
-    calculateshadow(index, element, "10", "1", "text-inset");
-  });
-}
-
 function loopthroughallshadowelements(){
-  headerShadow();
-  headertextShadow();
-  footerShadow();
-  footertextShadow();
-}
-
-function loopthroughsomeshadowelements(){
-  headerShadow();
-  footerShadow();
+  var elements = {
+    'header':           {'height': '30',  'darknessFactor':'1',   'type':'inset'},
+    '.shadowtext span': {'height': '12',  'darknessFactor':'1',   'type':'text'},
+    'footer div':       {'height': '15',  'darknessFactor':'0.9', 'type':'box'},
+    'footer div h2':    {'height': '10',  'darknessFactor':'1',   'type':'text-inset'},
+    'footer div a':     {'height': '10',  'darknessFactor':'1',   'type':'text-inset'}
+  }
+  $.each(elements, function(key, value){
+    $(key).each(function(index, element){
+      calculateshadow(index, element, value.height, value.darknessFactor, value.type);
+    });
+  });
 }
 
 // Figure out them shadows

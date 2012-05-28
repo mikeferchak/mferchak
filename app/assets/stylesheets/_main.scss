@@ -37,8 +37,6 @@ div {
   -webkit-filter: blur(1px);
 }
 
-
-
 a:link, a:visited, a {
   @include transition(background .2s);
   @include shadow(0px,0px,0px,0);
@@ -86,34 +84,6 @@ header {
       opacity:0.8;
     }
   }
-}
-
-
-#sun {
-  background-color:transparent;
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size:auto;
-  //background-image:url("sun.png");
-  background-size:60px 60px;
-  cursor:move;
-  // display:block;
-  height:100px;
-  overflow:hidden;
-  position: absolute;
-  top: -150px;
-  left: 50%;
-  margin:0 auto;
-  text-align:center;
-  width:100px;
-  @include transition(background-size 0.6s);
-  &:hover {
-    @include animation(meatspin, 2s, infinite);
-  }
-}
-
-#sun.ui-draggable-dragging {
-  background-size:100px 100px;
 }
 
 #stuff {

@@ -37,6 +37,13 @@ div {
   -webkit-filter: blur(1px);
 }
 
+#sun {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  display: block;
+}
+
 a:link, a:visited, a {
   @include transition(background .2s);
   @include shadow(0px,0px,0px,0);

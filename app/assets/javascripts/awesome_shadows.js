@@ -1,5 +1,6 @@
 //awesome_shadows.js
 
+
 // Center the light source when the page loads
 function repositionlightsource() {
   $("#sun").css({"left":(($(window).width()/2)-50)});

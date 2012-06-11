@@ -1,0 +1,78 @@
+$gutter: 12pt;
+$left_column_width: 20%;
+$h3_font_scale: 1.2;
+
+body.resume {
+	background-image: none !important;
+	header {
+		h1 {
+			color: white;
+			letter-spacing: 0em;
+			text-align:center;
+			padding-left:0;
+			padding-right:0;
+		}
+		#details {
+			p, a {
+				color: white;
+				text-align: center;
+			}
+		}
+	}
+	section {
+		width: 98%;
+		margin: $gutter auto;
+		h2 {
+			font-size: 24pt;
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+		.content {
+			padding-top: $gutter / $h3_font_scale;
+			width: 90%;
+			margin: 0 auto;
+			font-size: 13pt;
+			.details {
+				ul {
+					margin-left: $gutter;
+				}
+			}
+			.job {
+				margin-bottom: $gutter;
+			}
+			hgroup {
+				h3 {
+					font-size: $h3_font_scale + em;
+				}
+			}
+		}		
+	}
+}
+
+@media screen and (min-width: 800px){
+	body.resume {
+		section {
+			max-width: 1000px;
+			h2 {
+				font-size: 24pt;
+				float: left;
+				text-align: left;
+				width: $left_column_width;
+			}
+			.content {
+				width: 100% - $left_column_width;
+				margin-left: $left_column_width;
+				padding-left: $gutter;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 500px) {
+	body.resume {
+		.content {
+			font-size: 11pt;
+		}
+	}
+}

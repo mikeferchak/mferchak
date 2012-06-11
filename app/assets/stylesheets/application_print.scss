@@ -1,0 +1,52 @@
+@import "compass";
+
+$main-text: #000000;
+$page-width: 1000px;
+
+@import "mixin";
+@import "reset";
+@import "main";
+
+@import "resume_partial";
+
+body.resume {
+	font-size: 11pt;
+	p.moreinfo, p, .details p {
+		font-size: 11pt !important;
+	}
+	header {
+		background-color: #666666 !important;
+		margin: 70pt auto 0  !important;
+		padding: 0pt 0 10pt 0  !important;
+		text-align: center  !important;
+		width: 100%  !important;
+		h1 {
+			font-size: 4em;
+			color: white  !important;
+			letter-spacing: 0em  !important;
+			text-align: center  !important;
+			padding-left: 0  !important;
+			padding-right: 0  !important;			
+		}
+	}
+	section {
+		font-size: 11pt;
+		h2 {
+			font-size: 20pt;
+			float: left;
+			text-align: left;
+			width: $left_column_width;
+		}
+		.content {
+			width: 100% - $left_column_width;
+			margin-left: $left_column_width;
+			padding-left: $gutter;
+			font-size: 11pt;
+			hgroup {
+				h3 {
+					font-size: 12pt;
+				}
+			}
+		}
+	}
+}

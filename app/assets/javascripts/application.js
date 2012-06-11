@@ -1,6 +1,8 @@
 //= require jquery.min
 //= require jquery.ui.touch-punch-min
 //= require jquery-ui-1.8.17.custom.min
+//= require jquery.ui.touch-punch-min
+//= require modernizr
 //= require awesome_shadows
 //= require_self
 
@@ -11,6 +13,18 @@ $(document).ready(function() {
 
   rotateCrap();
   doThings();
+
+  // Draggable sun
+  $("#sun").draggable({
+    start: function(event, ui) {
+      console.log('begin dragging');
+      loopthroughallshadowelements();
+    },
+    drag: function(event, ui) {
+      console.log('dragging');
+      loopthroughallshadowelements();
+    }
+  });
 
   // Initialize all of the things!
   function doThings(){

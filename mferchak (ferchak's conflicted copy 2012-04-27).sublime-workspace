@@ -152,10 +152,18 @@
 	"buffers":
 	[
 		{
+			"file": "app/views/home/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 1739,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/views/layouts/application.html.haml",
 			"settings":
 			{
-				"buffer_size": 1504,
+				"buffer_size": 1555,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,23 +171,15 @@
 			"file": "app/assets/stylesheets/style.scss",
 			"settings":
 			{
-				"buffer_size": 275,
+				"buffer_size": 274,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/assets/javascripts/awesome_shadows.js",
+			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 2566,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/_main.scss",
-			"settings":
-			{
-				"buffer_size": 2445,
+				"buffer_size": 824,
 				"line_ending": "Unix"
 			}
 		}
@@ -190,10 +190,6 @@
 		"height": 392.0,
 		"selected_items":
 		[
-			[
-				"log",
-				"Git: Log All"
-			],
 			[
 				"disable",
 				"SublimeLinter: Disable Background Linting"
@@ -264,8 +260,6 @@
 	},
 	"file_history":
 	[
-		"/Library/WebServer/Documents/mferchak/Gemfile",
-		"/Library/WebServer/Documents/mferchak/app/views/home/index.html.haml",
 		"/Users/ferchak/Dropbox/www/mferchak/app/assets/stylesheets/_main.scss",
 		"/Users/ferchak/Dropbox/www/mferchak/app/views/layouts/application.html.haml",
 		"/Users/ferchak/Dropbox/www/mferchak/config/routes.rb",
@@ -391,7 +385,9 @@
 		"/Users/ferchak/Dropbox/vivisimo/gelato/cxo/app/views/accounts/show.html.erb",
 		"/Users/ferchak/Dropbox/vivisimo/gelato/cxo/app/views/shared/widgets/_salesforce_contacts_widget.html.erb",
 		"/Users/ferchak/www/commonplace/supplies/index.html",
-		"/Users/ferchak/www/commonplace/roasting/index.html"
+		"/Users/ferchak/www/commonplace/roasting/index.html",
+		"/Users/ferchak/www/commonplace/wholesale/index.html",
+		"/Users/ferchak/www/commonplace/equipment/index.html"
 	],
 	"find":
 	{
@@ -571,23 +567,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.haml",
+					"file": "app/views/home/index.html.haml",
 					"settings":
 					{
-						"buffer_size": 1504,
+						"buffer_size": 1739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								155,
-								155
+								730,
+								730
 							]
 						],
 						"settings":
@@ -653,18 +649,95 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/assets/stylesheets/style.scss",
+					"file": "app/views/layouts/application.html.haml",
 					"settings":
 					{
-						"buffer_size": 275,
+						"buffer_size": 1555,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								779,
+								779
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/style.scss",
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								125,
+								125
 							]
 						],
 						"settings":
@@ -727,57 +800,76 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/assets/javascripts/awesome_shadows.js",
+					"buffer": 3,
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 2566,
+						"buffer_size": 824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1104,
-								1104
+								194,
+								194
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/_main.scss",
-					"settings":
-					{
-						"buffer_size": 2445,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1604,
-								1604
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1612.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -816,10 +908,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.git":
-	{
-		"height": 142.0
-	},
 	"replace":
 	{
 		"height": 62.0
@@ -830,14 +918,6 @@
 		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"main",
-				"app/assets/stylesheets/_main.scss"
-			],
-			[
-				"js",
-				"app/assets/javascripts/awesome_shadows.js"
-			],
 			[
 				"gem",
 				"Gemfile"
@@ -1103,10 +1183,6 @@
 		"selected_items":
 		[
 			[
-				"commonplace",
-				"/Library/WebServer/Documents/commonplace/commonplace (Mikes-Mac-Pro's conflicted copy 2012-04-16).sublime-project"
-			],
-			[
 				"",
 				"/Users/ferchak/Dropbox/vivisimo/skunk/display/display.sublime-project"
 			],
@@ -1140,7 +1216,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 193.0,
 	"status_bar_visible": false
 }

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mferchak::Application.load_tasks
+Noar::Application.load_tasks

@@ -1,1 +1,0 @@
-<div id="footer" class="copyright wrap">Copyright © 2010 Vivisimo, Inc. All rights reserved worldwide.</div>

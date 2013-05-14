@@ -3,16 +3,13 @@
 /[if IE 7 ]    <html lang="en" class="no-js ie7">
 /[if IE 8 ]    <html lang="en" class="no-js ie8">
 /[if IE 9 ]    <html lang="en" class="no-js ie9">
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 %head
   %meta{:charset => "utf-8"}/
-  %meta{ :name => "description", :content => "The place for all things Mike-Ferchak-y."}/
-  %meta{ :name => "keywords", :content => "Web design, web, designer, Pittsburgh"}/
+  %meta{ :name => "description", :content => "The place for everything Mike-Ferchak-y."}/
+  %meta{ :name => "keywords", :content => "web designer, Pittsburgh"}/
   %meta{ :name => "author", :content => "Mike Ferchak"}/
-  %title The place for all things Mike Ferchak-y
-  %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
-  %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
-  %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+  %title The place for everything Mike Ferchak-y
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0"}
   = stylesheet_link_tag :application
   = stylesheet_link_tag params[:controller]
   = stylesheet_link_tag 'application_print', :media => 'print'
@@ -22,14 +19,3 @@
 %body{:class => controller_name}
 
   =yield
-
-/[if lt IE 7 ]
-  <script src="js/dd_belatedpng.js?"></script>
-  <script>
-  \  //fix those png IMGs and .png_bg background-images
-  \  DD_belatedPNG.fix('img, .png_bg');
-  </script>
-/ yui profiler and profileviewer - remove for production
-/ %script{:src => "js/profiling/yahoo-profiling.min.js?"}
-/ %script{:src => "js/profiling/config.js?v=1"}
-/ end profiling code

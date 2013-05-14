@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Mferchak::Application.config.secret_token = '1bc6db3cd68c97695f62ca64c8e33663b8a310fd51e8c9aef89a7c554461e9d3b98fd436b2bdbbe49c3c1148b939567fea549c8cd2748c4633ed02557e531ee2'
+Noar::Application.config.secret_token = 'c33f70896ac05bd22d2031511038a58f6c0a3e2c1da2f2e077408074cc279c2d0be6d99dd32241bdde539d1f0953264088aeef13f67984c20ca3f6258c24cb9f'

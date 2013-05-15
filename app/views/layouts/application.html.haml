@@ -10,8 +10,8 @@
   %meta{ :name => "author", :content => "Mike Ferchak"}/
   %title The place for everything Mike Ferchak-y
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0"}
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Noto+Serif"
   = stylesheet_link_tag :application
-  / = stylesheet_link_tag params[:controller]
   = stylesheet_link_tag :application_print, :media => 'print'
   = javascript_include_tag 'application'
   = csrf_meta_tag

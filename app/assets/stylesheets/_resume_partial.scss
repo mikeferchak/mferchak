@@ -20,19 +20,29 @@ body.resume {
 		}
 	}
 	section {
+		line-height: 2em;
 		width: 98%;
 		margin: $gutter auto;
+		a {
+			border-bottom: 2px solid hsl(40, 60%, 90%);
+			&:hover {
+				color: $main-text;
+				background-color: hsl(40, 60%, 90%);
+			}
+		}
 		h2 {
 			font-size: 24pt;
 			float: none;
 			width: 100%;
 			text-align: center;
+			margin-top: 9px;
 		}
 		.content {
 			padding-top: $gutter / $h3_font_scale;
 			width: 90%;
 			margin: 0 auto;
 			font-size: 13pt;
+			margin-bottom: 2em;
 			.details {
 				ul {
 					margin-left: $gutter;
@@ -46,7 +56,7 @@ body.resume {
 					font-size: $h3_font_scale + em;
 				}
 			}
-		}		
+		}
 	}
 }
 

@@ -21,14 +21,6 @@ p {
   font-size: 14pt;
 }
 
-#sun {
-  height: 1px;
-  width: 1px;
-  position:fixed;
-  top: -200px;
-  left: 30%;
-}
-
 a:link, a:visited, a {
   @include transition(background .2s);
   background-color:hsla(0, 0%, 20%, 0);
@@ -45,6 +37,7 @@ header {
   padding: 0pt 0 10pt 0;
   text-align:center;
   width:100%;
+
   h1  {
     @include textshadow(1px, 2px, 4px, rgba(0,0,0,0.2));
     font-family: 'futura', 'helvetica', sans-serif;
@@ -69,15 +62,18 @@ header {
   max-width: $page-width;
   _width: $page-width;
   #width: $page-width;
+
   footer {
     margin:2em 0 0 0;
     padding:0;
-    h2  {
+
+    h2 {
       font-family: 'futura', 'helvetica', sans-serif;
       font-size: 30pt;
       letter-spacing: .1em;
       margin: 0;
     }
+
     div {
       @include shadow;
       background-color: hsl(0, 0%, 95%);
@@ -87,8 +83,10 @@ header {
       text-align:center;
       vertical-align:top;
       width: 26%;
+
       ul li {
         margin:.5em 0 0 0;
+
         a {
           cursor:pointer;
           display: block;

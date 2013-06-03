@@ -1,58 +1,117 @@
-//awesome_shadows.js
+(function($) {
+    "use strict";
 
-// Center the light source when the page loads
-function loopthroughallshadowelements(){
-  var elements = {
-    'header':           {'height': '15',  'darknessFactor':'1',   'type':'inset'},
-    '.shadowtext span': {'height': '6',  'darknessFactor':'1',   'type':'text'},
-    'footer div':       {'height': '6',  'darknessFactor':'0.2', 'type':'inset'}
-  }
-  $.each(elements, function(key, value){
-    $(key).each(function(index, element){
-      calculateshadow(index, element, value.height, value.darknessFactor, value.type);
-    });
-  });
-}
+    $.fn.bounds = function() {
+        var element = this;
+        try {
+            return ({ top: element.offset().top,
+                      right: (element.offset().left + element.outerWidth()),
+                      bottom: (element.offset().top + element.outerHeight()),
+                      left: element.offset().left});
+        } catch (error) {
+            return ({ top: undefined,
+                      right: undefined,
+                      bottom: undefined,
+                      left: undefined});
+        }
+    };
 
-// Figure out them shadows
-function calculateshadow(index, element, height, darknessFactor, type){
-  var offset = $(element).offset(),
-      sunoffset = $('#sun').offset(),
-      bx = offset.left + ($(element).width()/2),
-      by = offset.top + ($(element).height()/2),
-      lsx = sunoffset.left + ($("#sun").width()/2),
-      lsy = sunoffset.top + ($("#sun").width()/2),
-      xdiff = lsx-bx,
-      ydiff = lsy-by,
-      zdiff = lsz-height,
-      bxangle = Math.atan(xdiff/zdiff),
-      bzangle = Math.atan(ydiff/zdiff),
-      bxoffset = Math.tan(bxangle) * height,
-      byoffset = Math.tan(bzangle) * height,
-      distance = Math.sqrt((xdiff*xdiff)+(ydiff*ydiff)),
-      blur = distance * height / 1000,
-      darkness = 15 * darknessFactor / (Math.sqrt(distance)),
-      shadowvalue = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(0,0,0,"+darkness+")",
-      shadowvalueLight = -(bxoffset) + "px " + -(byoffset) + "px " + blur + "px rgba(255,255,255,"+darkness+")";
+    $.fn.center = function() {
+        var element = this.bounds();
 
-  if( type === "inset" )  {
-    $(element).css({'box-shadow': 'inset '+shadowvalue, 'background-image': awesomeGradient("0.2","0")});
-  }
-  if(type === "box")  {
-    $(element).css({'box-shadow': shadowvalue, 'background-image': awesomeGradient("0.8","0.2")});
-  }
-  if(type === "text")  {
-    $(element).css({'text-shadow': shadowvalue});
-  }
-  if(type === "text-inset")  {
-    $(element).css({'text-shadow': shadowvalueLight});
-  }
+        try {
+            return ({ x: (element.left + element.right) / 2,
+                      y: (element.top + element.bottom) / 2});
+        } catch (error) {
+            return ({ x: undefined,
+                      y: undefined});
+        }
+    };
 
-  function awesomeGradient(opacity1, opacity2) {
-    if(!opacity1) {opacity = "1";}
-    if(!opacity2) {opacity = "0.6";}
-    return(
-      '-webkit-radial-gradient('+(lsx - offset.left)+'px '+(lsy - offset.top)+'px, 250px 250px, rgba(249, 248, 245, '+opacity1+'), rgba(247, 247, 247, '+opacity2+'))'
-    );
-  }
-}
+    $.fn.addAwesomeShadow = function(height, darkness, type, light_source) {
+        var element = this;
+
+        if (typeof(element.attr("awesome_height")) !== 'undefined') {
+            height = element.attr("awesome_height");
+        } else if (typeof(height) === 'undefined') {
+            height = 10;
+        }
+
+        if (typeof(element.attr("awesome_darkness")) !== 'undefined') {
+            darkness = element.attr("awesome_darkness");
+        } else if (typeof(darkness) === 'undefined') {
+            darkness = 0.5;
+        }
+
+        if (typeof(type) === 'undefined') type = "";
+        if (typeof(light_source) === 'undefined') light_source = $('#awesome_light_source');
+
+        var a = element.center(),
+            b = light_source.center(),
+            b_z = 700,
+            delta = {
+                x: b.x - a.x,
+                y: b.y - a.y,
+                z: b_z - height
+            },
+            a_xangle = Math.atan(delta.x / delta.z),
+            b_zangle = Math.atan(delta.y / delta.z),
+            a_xoffset = Math.tan(a_xangle) * height,
+            a_yoffset = Math.tan(b_zangle) * height,
+            distance = Math.sqrt((delta.x * delta.x) + (delta.y * delta.y)),
+            blur = (distance * height) / 700,
+            darkness = (15 * darkness) / (Math.sqrt(distance)),
+            shadowvalue = -a_xoffset + "px " + -a_yoffset + "px " + blur + "px rgba(0,0,0," + darkness + ")",
+            shadowvalueLight = -a_xoffset + "px " + -a_yoffset + "px " + blur + "px rgba(255,255,255," + darkness + ")";
+
+        if (element.hasClass("awesome_shadow") || type === "box") {
+            $(element).css({'box-shadow': shadowvalue });
+        }
+        if (element.hasClass("awesome_inset_shadow") || type === "inset") {
+            $(element).css({'box-shadow': 'inset ' + shadowvalue });
+        }
+        if (element.hasClass("awesome_text_shadow") || type === "text") {
+            $(element).css({'text-shadow': shadowvalue});
+        }
+        if (element.hasClass("awesome_inset_text_shadow") || type === "text_inset") {
+            $(element).css({'text-shadow': shadowvalueLight});
+        }
+    };
+
+    function awesomeShadowsRefresh() {
+        var classes = [ ".awesome_shadow",
+                        ".awesome_inset_shadow",
+                        ".awesome_text_shadow",
+                        ".awesome_inset_text_shadow"];
+
+        $(classes.join(", ")).each(function() {
+            $(this).addAwesomeShadow();
+        });
+    }
+
+    function awesomeShadowsInit() {
+        var default_lightsource_id = "awesome_light_source";
+
+        if ($('#' + default_lightsource_id).length === 0) {
+            $("body").append("<div style='position: fixed; top: -10%; left: 50%;' id='" + default_lightsource_id + "'></div>");
+        }
+
+        awesomeShadowsRefresh();
+
+        $(window).on({
+            resize: function() {
+                awesomeShadowsRefresh();
+            },
+            scroll: function() {
+                awesomeShadowsRefresh();
+            }
+        });
+
+        $(document).mousemove(function(e){
+            $("#awesome_light_source").css({top: e.pageY - 200, left: e.pageX, position: "fixed"});
+            awesomeShadowsRefresh();
+        });
+    }
+
+    awesomeShadowsInit();
+})(jQuery);

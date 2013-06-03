@@ -1,43 +1,17 @@
-%header
+%header.awesome_inset_shadow
   %h1.aa.shadowtext
     %span.phrase
-      %span.word
-        %span M
-        %span i
-        %span k
-        %span e
-        %span '
-        %span s
-        %span &nbsp;
-      %span.word
-        %span s
-        %span t
-        %span u
-        %span p
-        %span i
-        %span d
-        %span &nbsp;
-      %span.word
-        %span i
-        %span n
-        %span t
-        %span e
-        %span r
-        %span n
-        %span e
-        %span t
-        %span &nbsp;
-      %span.word
-        %span p
-        %span a
-        %span g
-        %span e
-        %span &nbsp;
+      - "Mike's stupid internet page".split.each do |word|
+        %span.word
+          - word.split(//).each do |letter|
+            %span.awesome_text_shadow
+              = letter
+          %span &nbsp;
 
 #stuff
   %section#about
     %footer.shadowbox
-      #contact
+      #contact.awesome_inset_shadow{:awesome_darkness => "0.1"}
         %h2 Contact
         %ul
           %li
@@ -46,16 +20,15 @@
             = mail_to "mikeferchak+spam@gmail.com", 'mikeferchak@gmail.com'
           %li
             = link_to 'my awesome website', '.'
-      #code
+      #code.awesome_inset_shadow{:awesome_darkness => "0.1"}
         %h2 Code
         %ul
           %li
             = link_to 'github.com/mikeferchak', "http://github.com/mikeferchak"
-      #creep
+      #creep.awesome_inset_shadow{:awesome_darkness => "0.1"}
         %h2 Creep
         %ul
           %li
             = link_to 'twitter.com/mikeferchak', 'http://twitter.com/mikeferchak'
           %li
             = link_to 'facebook.com/mikeferchak', 'http://facebook.com/mikeferchak'
-#sun

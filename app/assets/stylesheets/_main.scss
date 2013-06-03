@@ -3,18 +3,10 @@
   color: white;
 }
 
-* {
-  -webkit-transform: rotateZ(360deg);
-     -moz-transform: rotateZ(360deg);
-      -ms-transform: rotateZ(360deg);
-       -o-transform: rotateZ(360deg);
-          transform: rotateZ(360deg);
-}
-
 body, h1, h2, ul, li, div, a, p {
   color: $main-text;
-  font-family: 'Noto Serif', serif;
-  box-sizing: border-box;
+  font-family: Futura, 'Helvetica Neue', sans;
+  @include box-sizing(border-box);
 }
 
 p {
@@ -25,22 +17,22 @@ a:link, a:visited, a {
   @include transition(background .2s);
   background-color:hsla(0, 0%, 20%, 0);
   text-decoration:none;
+  line-height: 2em;
   &:hover {
-    background-color:hsla(0, 0%, 20%, 0.24);
-    text-decoration:none;
+    background-color:hsla(0, 0%, 22%, 0.2);
   }
 }
 
 header {
-  background-color: rgba(0,0,0,0.8);
+  background: hsl(0,0%,20%);
   margin: 90pt auto 0;
-  padding: 0pt 0 10pt 0;
+  padding: 0 0 10pt 0;
   text-align:center;
   width:100%;
 
   h1  {
-    @include textshadow(1px, 2px, 4px, rgba(0,0,0,0.2));
-    font-family: 'futura', 'helvetica', sans-serif;
+    @include textshadow(1px 2px 4px hsl(0,0%,20%));
+    color: hsl(0,0%,98%);
     font-weight: 100;
     line-height:160%;
     letter-spacing:-0.17em;
@@ -50,8 +42,7 @@ header {
     text-align: center;
     white-space: nowrap;
     span.word {
-      display:inline-block;
-      color: #F9F8F5;
+      @include inline-block;
       opacity:0.8;
     }
   }
@@ -68,7 +59,6 @@ header {
     padding:0;
 
     h2 {
-      font-family: 'futura', 'helvetica', sans-serif;
       font-size: 30pt;
       letter-spacing: .1em;
       margin: 0;
@@ -85,7 +75,7 @@ header {
       width: 26%;
 
       ul li {
-        margin:.5em 0 0 0;
+        margin:0.5em 0 0 0;
 
         a {
           cursor:pointer;

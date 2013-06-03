@@ -11,9 +11,7 @@ group :assets do
   gem 'coffee-rails'
 
   gem 'compass-rails'
-  # gem 'compass-h5bp'
   gem 'modernizr-rails'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyrhino'
 
   gem 'uglifier', '>= 1.0.3'

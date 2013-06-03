@@ -59,7 +59,7 @@
             a_xoffset = Math.tan(a_xangle) * height,
             a_yoffset = Math.tan(b_zangle) * height,
             distance = Math.sqrt((delta.x * delta.x) + (delta.y * delta.y)),
-            blur = (distance * height) / 700,
+            blur = (distance * height) / 1000,
             darkness = (15 * darkness) / (Math.sqrt(distance)),
             shadowvalue = -a_xoffset + "px " + -a_yoffset + "px " + blur + "px rgba(0,0,0," + darkness + ")",
             shadowvalueLight = -a_xoffset + "px " + -a_yoffset + "px " + blur + "px rgba(255,255,255," + darkness + ")";

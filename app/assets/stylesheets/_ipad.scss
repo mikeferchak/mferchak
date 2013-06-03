@@ -31,27 +31,27 @@
   #stuff {
     footer {
       h2 {
-          font-size:2.5em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size:2.5em;
       }
       div {
-          padding-left:4%;
-          padding-right:4%;
-          text-align:left;
-          display:block;
-          width:93%;
-          margin:2em auto;
-          ul {
-            li {
-              font-size:1.3em;
-              margin: 0;
-              a {
-                  width: 100%;
-                  margin: .3em 0%;
-                  padding: 0.2em 4px;
-              }
-            }            
+        padding-left:4%;
+        padding-right:4%;
+        text-align:left;
+        width:100%;
+        margin:2em auto;
+        ul {
+          li {
+            font-size:1.3em;
+            margin: 0;
+            a {
+                width: 100%;
+                margin: .3em 0%;
+                padding: 0.2em 4px;
+            }
           }
-
+        }
       }
     }
   }
